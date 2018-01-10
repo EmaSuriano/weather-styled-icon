@@ -1,23 +1,20 @@
 import expect from "expect";
 import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
+import { shallow, configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 
+configure({ adapter: new Adapter() });
 import Component from "src/";
 
 describe("Component", () => {
   let node;
 
   beforeEach(() => {
-    node = document.createElement("div");
-  });
-
-  afterEach(() => {
-    unmountComponentAtNode(node);
+    node = shallow(<Component />);
   });
 
   it("displays a welcome message", () => {
-    render(<Component />, node, () => {
-      expect(node.innerHTML).toContain("Welcome to the Wonderful World of npm");
-    });
+    const message = node.find("h2");
+    expect(message.text()).toBe("Welcome to the Wonderful World of npm");
   });
 });
