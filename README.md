@@ -1,6 +1,6 @@
 # weather-styled-icon
 
-[![Travis][https://api.travis-ci.org/emasuriano/weather-styled-icon.svg]](https://travis-ci.org/EmaSuriano/weather-styled-icon)]
+[![Travis][https://api.travis-ci.org/emasuriano/weather-styled-icon.svg]](https://travis-ci.org/EmaSuriano/weather-styled-icon)
 [![npm version](https://badge.fury.io/js/weather-styled-icon.svg)](https://www.npmjs.org/package/npm-package)
 [![Coveralls][coveralls-badge]][coveralls]
 
