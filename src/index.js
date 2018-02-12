@@ -1,17 +1,6 @@
-import React, { Component } from "react";
+import Sunny from './Sunny';
+import Rain from './Rain';
+import Snow from './Snow';
+import Cloudy from './Cloudy';
 
-export default class extends Component {
-  state = {
-    a: 1
-  };
-
-  render() {
-    const a = 1;
-    return (
-      <div>
-        <h2>Welcome to the Wonderful World of npm</h2>
-        {a ? <p>asdasd</p> : <p>qweqwe</p>}
-      </div>
-    );
-  }
-}
+export { Sunny, Rain, Snow, Cloudy };
