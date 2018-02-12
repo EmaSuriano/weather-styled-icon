@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import defaultTheme from './defaultTheme';
 
 const Spin = keyframes`
   100% {
@@ -31,7 +30,6 @@ SunSphere.propTypes = {
 
 SunSphere.defaultProps = {
   onTheSide: false,
-  theme: defaultTheme,
 };
 
 export default SunSphere;

@@ -6,6 +6,7 @@ import Rays from './Rays';
 import SunSphere from './SunSphere';
 import Icon from './Icon';
 import WeatherContainer from './WeatherContainer';
+import WeatherThemeProvider from './WeatherThemeProvider';
 
 export {
   Cloud,
@@ -16,4 +17,5 @@ export {
   SunSphere,
   Icon,
   WeatherContainer,
+  WeatherThemeProvider,
 };

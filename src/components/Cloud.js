@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import defaultTheme from './defaultTheme';
 
 const CloudAnimation = keyframes`
   0% {
@@ -66,10 +65,6 @@ Cloud.propTypes = {
     cloudsColor: PropTypes.string,
     backgroundColor: PropTypes.string,
   }),
-};
-
-Cloud.defaultProps = {
-  theme: defaultTheme,
 };
 
 export default Cloud;

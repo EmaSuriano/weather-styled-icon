@@ -2,9 +2,8 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import WeatherContainer from './WeatherContainer';
-import defaultTheme from './defaultTheme';
 
-const DropsAnimation = props => keyframes`
+const DropAnimation = props => keyframes`
 0% {
   background: ${props.theme.dropsColor};
   box-shadow: 0.625em 0.875em 0 -0.125em rgba(255, 255, 255, 0.2),
@@ -29,7 +28,7 @@ const DropsAnimation = props => keyframes`
 }
 `;
 
-const Drops = styled.div`
+const Drop = styled.div`
   &:after {
     content: '';
     position: absolute;
@@ -45,9 +44,15 @@ const Drops = styled.div`
       -0.875em 1.125em 0 -0.125em rgba(255, 255, 255, 0.2),
       -1.375em -0.125em 0 rgba(255, 255, 255, 0.2);
     transform: rotate(-28deg);
-    animation: ${DropsAnimation} 3s linear infinite;
+    animation: ${DropAnimation} 3s linear infinite;
   }
 `;
+
+const Drops = () => (
+  <WeatherContainer>
+    <Drop />
+  </WeatherContainer>
+);
 
 Drops.propTypes = {
   theme: PropTypes.shape({
@@ -56,12 +61,4 @@ Drops.propTypes = {
   }),
 };
 
-Drops.defaultProps = {
-  theme: defaultTheme,
-};
-
-export default () => (
-  <WeatherContainer>
-    <Drops />
-  </WeatherContainer>
-);
+export default Drops;

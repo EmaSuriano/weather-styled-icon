@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import WeatherContainer from './WeatherContainer';
-import defaultTheme from './defaultTheme';
 
 const Spin = keyframes`
   100% {
@@ -47,10 +46,6 @@ Flake.PropTypes = {
   theme: PropTypes.shape({
     snowColor: PropTypes.string,
   }),
-};
-
-Flake.defaultProps = {
-  theme: defaultTheme,
 };
 
 const Snowing = () => (

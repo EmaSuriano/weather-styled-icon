@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import defaultTheme from './defaultTheme';
 
 const WeatherContainer = styled.div`
   position: absolute;
@@ -17,10 +16,6 @@ WeatherContainer.propTypes = {
   theme: PropTypes.shape({
     backgroundColor: PropTypes.string,
   }),
-};
-
-WeatherContainer.defaultProps = {
-  theme: defaultTheme,
 };
 
 export default WeatherContainer;

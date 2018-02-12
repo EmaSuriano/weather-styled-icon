@@ -1,7 +1,6 @@
-// import Sunny from './Weathers/Sunny';
-// import Rain from './Weathers/Rain';
-// import Snow from './Weathers/Snow';
-import Cloudy from './Weathers/Cloudy';
-import defaultTheme from './components/defaultTheme';
+import Sunny from './Sunny';
+import Rain from './Rain';
+import Snow from './Snow';
+import Cloudy from './Cloudy';
 
-export { Sunny, Rain, Snow, Cloudy, defaultTheme };
+export { Sunny, Rain, Snow, Cloudy };
