@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Sunny from './Sunny';
+import { Sun } from './Sunny';
 import { Cloud, Icon, WeatherThemeProvider } from './components';
 
 const Cloudy = ({ patchy, size, theme }) => (
   <WeatherThemeProvider theme={theme}>
     <Icon size={size}>
       <Cloud key="cloud" />
-      {patchy ? <Sunny onTheSide /> : <Cloud />}
+      {patchy ? <Sun onTheSide /> : <Cloud />}
     </Icon>
   </WeatherThemeProvider>
 );

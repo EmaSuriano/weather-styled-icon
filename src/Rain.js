@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Sunny from './Sunny';
+import { Sun } from './Sunny';
 import {
   WeatherThemeProvider,
   Cloud,
@@ -13,7 +13,7 @@ const Rain = ({ lighting, patchy, size, theme }) => (
   <WeatherThemeProvider theme={theme}>
     <Icon size={size}>
       <Cloud />
-      {patchy && <Sunny onTheSide />}
+      {patchy && <Sun onTheSide />}
       {lighting ? <Lighting /> : <Drops />}
     </Icon>
   </WeatherThemeProvider>

@@ -4,7 +4,12 @@
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": ["css", "es", "lib", "umd"],
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -14,8 +19,10 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-fontawesome": "^1.6.1",
     "styled-components": "^2.4.0",
-    "prop-types": "^15.6.0"
+    "webfontloader": "^1.6.28"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -31,5 +38,10 @@
   "homepage": "https://emasuriano.github.io/weather-styled-icon/",
   "license": "MIT",
   "repository": "https://github.com/EmaSuriano/weather-styled-icon",
-  "keywords": ["react-component", "weather", "icon", "styled-component"]
+  "keywords": [
+    "react-component",
+    "weather",
+    "icon",
+    "styled-component"
+  ]
 }
