@@ -14,4 +14,3 @@ branches:
   only:
     - master
     - /^greenkeeper/.*$/
-    - src
