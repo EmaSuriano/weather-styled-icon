@@ -15,5 +15,6 @@ describe('<Cloudy />', () => {
 
   it('displays a welcome message', () => {
     expect(node).toExist();
+    expect(true).toBe(true);
   });
 });
