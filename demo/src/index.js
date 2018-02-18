@@ -12,8 +12,6 @@ WebFont.load({
 
 ReactDOM.render(<Demo />, document.querySelector('#demo'));
 
-console.log('asljkdjalksdj');
-
 if (module.hot) {
   console.log('Aplying hot reload');
   module.hot.accept();
