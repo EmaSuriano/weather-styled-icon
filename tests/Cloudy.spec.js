@@ -1,10 +1,6 @@
-import expect from 'expect';
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
-import { Cloudy } from 'lib';
+import { shallow } from 'enzyme';
+import { Cloudy } from '../src';
 
 describe('<Cloudy />', () => {
   let node;
@@ -14,6 +10,6 @@ describe('<Cloudy />', () => {
   });
 
   it('displays a welcome message', () => {
-    expect(node).toExist();
+    expect(node.exists()).toBe(true);
   });
 });
