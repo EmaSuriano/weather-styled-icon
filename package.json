@@ -9,13 +9,13 @@
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
-    "test": "jest  --coverage",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "gh-pages -d demo/dist"    
+    "deploy": "gh-pages -d demo/dist"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "jest": "^22.3.0",
-    "gh-pages": "^1.1.0",    
+    "gh-pages": "^1.1.0",
     "nwb": "0.21.x",
     "path": "^0.12.7",
     "raf": "^3.4.0",
@@ -54,20 +54,12 @@
     "react-syntax-highlighter": "^7.0.0"
   },
   "jest": {
-    "setupFiles": [
-      "raf/polyfill",
-      "<rootDir>/config/test-setup.js"
-    ],
+    "setupFiles": ["raf/polyfill", "<rootDir>/config/test-setup.js"],
     "transform": {
       "^.+\\.js$": "<rootDir>/config/jest.transform.js"
     },
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/index.js"
-    ]
+    "moduleDirectories": ["node_modules"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}", "!src/index.js"]
   },
   "author": "emanuel.suriano",
   "homepage": "https://emasuriano.github.io/weather-styled-icon/",

@@ -1,28 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultTheme from '../constants/defaultTheme';
 import { ThemeProvider } from 'styled-components';
+import { ThemePropType, defaultTheme } from '../constants';
 
-const WeatherThemeProvider = ({ theme, children }) =>
-  theme !== defaultTheme ? (
-    <ThemeProvider
-      theme={{
-        ...defaultTheme,
-        ...theme,
-      }}
-    >
-      {children}
-    </ThemeProvider>
-  ) : (
-    children
-  );
+const WeatherThemeProvider = ({ theme, children }) => {
+  // if (theme === defaultTheme) return children;
 
-WeatherThemeProvider.propTypes = {
-  theme: PropTypes.object,
-  children: PropTypes.node.isRequired,
+  const themeToApply =
+    theme !== defaultTheme
+      ? {
+          ...defaultTheme,
+          ...theme,
+        }
+      : defaultTheme;
+  return <ThemeProvider theme={themeToApply}>{children}</ThemeProvider>;
 };
 
-WeatherThemeProvider.defaultTheme = {
+WeatherThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+  theme: ThemePropType,
+};
+
+WeatherThemeProvider.defaultProps = {
   theme: defaultTheme,
 };
 

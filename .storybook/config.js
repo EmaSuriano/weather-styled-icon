@@ -3,11 +3,7 @@ import { setOptions } from '@storybook/addon-options';
 
 // Option defaults:
 setOptions({
-  name: 'asdasd',
-  /**
-   * URL for name in top left corner to link to
-   * @type {String}
-   */
+  name: 'Weather Styled Icon',
   url: '#',
   goFullScreen: false,
   /**

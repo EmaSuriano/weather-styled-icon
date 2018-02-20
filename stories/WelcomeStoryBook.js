@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { linkTo } from '@storybook/addon-links';
-import { Sunny } from '../src';
+import { Sunny, Rain, Snow, Cloudy } from '../src';
 
 const WelcomeContainer = styled.div`
   margin: 15px;
@@ -14,6 +14,9 @@ const WelcomeContainer = styled.div`
 const WelcomeStoryBook = () => (
   <WelcomeContainer>
     <Sunny />
+    <Cloudy />
+    <Rain />
+    <Snow />
     <h1>Welcome to Weather Styled Icon!</h1>
     <p>This a collection of weather icons built with React</p>
 

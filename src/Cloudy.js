@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Sun } from './Sunny';
+import { ThemePropType, defaultTheme } from './constants';
 import { Cloud, Icon, WeatherThemeProvider } from './components';
 
 const Cloudy = ({ patchy, size, theme }) => (
@@ -15,12 +16,13 @@ const Cloudy = ({ patchy, size, theme }) => (
 Cloudy.propTypes = {
   patchy: PropTypes.bool,
   size: PropTypes.number,
-  theme: PropTypes.object,
+  theme: ThemePropType,
 };
 
 Cloudy.defaultProps = {
   patchy: false,
   size: 1,
+  theme: defaultTheme,
 };
 
 export default Cloudy;
