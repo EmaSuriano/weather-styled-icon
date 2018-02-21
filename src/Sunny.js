@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Sun, WeatherThemeProvider } from './components';
+import { ThemePropType, defaultTheme } from './constants';
 
 const Sunny = ({ size, theme }) => (
   <WeatherThemeProvider theme={theme}>
@@ -10,11 +11,12 @@ const Sunny = ({ size, theme }) => (
 
 Sunny.propTypes = {
   size: PropTypes.number,
-  theme: PropTypes.object,
+  theme: ThemePropType,
 };
 
 Sunny.defaultProps = {
   size: 1,
+  theme: defaultTheme,
 };
 
 export default Sunny;

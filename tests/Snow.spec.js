@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Cloudy } from '../src';
+import { Snow } from '../src';
 
-describe('<Cloudy />', () => {
+describe('<Snow />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Cloudy theme={{ cloudsColor: 'white' }} size={2} />);
+    wrapper = shallow(<Snow theme={{ cloudsColor: 'white' }} size={2} />);
   });
 
   it('should render WeatherThemeProvider with theme', () => {
@@ -25,12 +25,9 @@ describe('<Cloudy />', () => {
     expect(icon.prop('size')).toBe(2);
   });
 
-  it('should render 2 Cloud components when patchy is false', () => {
-    const clouds = wrapper.find('Cloud');
-    const sun = wrapper.find('Sun');
-
-    expect(clouds).toHaveLength(2);
-    expect(sun).toHaveLength(0);
+  it('should render Cloud with Snowing when lighting is false', () => {
+    expect(wrapper.find('Cloud').exists()).toBe(true);
+    expect(wrapper.find('Snowing').exists()).toBe(true);
   });
 
   it('should render Cloud and Sun when patchy is true', () => {

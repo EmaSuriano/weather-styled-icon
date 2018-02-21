@@ -24,7 +24,7 @@ const WelcomeStoryBook = () => (
     <h2>Why using it?</h2>
     <p>
       Because they are nice and clean{' '}
-      <span role="img" aria-label="hear">
+      <span role="img" aria-label="heart">
         😍
       </span>{' '}
       Beside that, by using them you get:{' '}
@@ -35,7 +35,7 @@ const WelcomeStoryBook = () => (
       <li>Animated only with CSS3</li>
     </ul>
 
-    <p>Please navigate between them and check all the variations of them</p>
+    <p>Please navigate between them and check all the variations</p>
   </WelcomeContainer>
 );
 

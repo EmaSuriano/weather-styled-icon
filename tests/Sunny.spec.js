@@ -1,7 +1,6 @@
-import { Sunny } from '../src';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { wrap } from 'module';
+import { Sunny } from '../src';
 
 describe('<Sunny />', () => {
   let wrapper;
