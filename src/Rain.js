@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sun } from './Sunny';
 import {
   WeatherThemeProvider,
   Cloud,
   Lighting,
   Drops,
   Icon,
+  Sun,
 } from './components';
 
 const Rain = ({ lighting, patchy, size, theme }) => (

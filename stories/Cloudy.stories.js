@@ -9,9 +9,9 @@ storiesOf('Cloudy', module)
   .addDecorator((story, context) => withInfo('Cloudy')(story)(context))
   .add('default', () => <Cloudy />)
   .add('different sizes', () => [
-    <Cloudy size="1.5" />,
-    <Cloudy />,
     <Cloudy size="0.5" />,
+    <Cloudy />,
+    <Cloudy size="1.5" />,
   ])
   .add('with theme', () => (
     <BackgroundContainer color="honeyDew">
