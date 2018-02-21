@@ -1,6 +1,6 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import { linkTo } from '@storybook/addon-links';
 import { Sunny, Rain, Snow, Cloudy } from '../src';
 
 const WelcomeContainer = styled.div`
@@ -13,20 +13,32 @@ const WelcomeContainer = styled.div`
 
 const WelcomeStoryBook = () => (
   <WelcomeContainer>
-    <Sunny />
-    <Cloudy />
-    <Rain />
-    <Snow />
+    <Sunny size="0.9" />
+    <Cloudy size="0.9" />
+    <Rain size="0.9" />
+    <Snow size="0.9" />
+
     <h1>Welcome to Weather Styled Icon!</h1>
     <p>This a collection of weather icons built with React</p>
 
     <h2>Why using it?</h2>
+    <p>
+      Because they are nice and clean{' '}
+      <span role="img" aria-label="hear">
+        😍
+      </span>{' '}
+      Beside that, by using them you get:{' '}
+    </p>
     <ul>
-      <li>Weather configurable by props</li>
+      <li>Weather Icons configurable by props</li>
       <li>Powered by styled-components</li>
       <li>Animated only with CSS3</li>
     </ul>
+
+    <p>Please navigate between them and check all the variations of them</p>
   </WelcomeContainer>
 );
 
-export default WelcomeStoryBook;
+storiesOf('@Welcome', module).add('to Weather Styled Icon', () => (
+  <WelcomeStoryBook />
+));

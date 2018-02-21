@@ -9,6 +9,8 @@ const Icon = styled.div`
   font-size: ${props => `${props.size}em`};
 `;
 
+Icon.displayName = 'Icon';
+
 Icon.propTypes = {
   size: PropTypes.number,
 };

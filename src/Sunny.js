@@ -1,15 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SunSphere, Rays, Icon, WeatherThemeProvider } from './components';
-
-// TODO: move Sun to components folder
-export const Sun = ({ onTheSide, size }) => (
-  <Icon size={size}>
-    <SunSphere onTheSide={onTheSide}>
-      <Rays />
-    </SunSphere>
-  </Icon>
-);
+import { Sun, WeatherThemeProvider } from './components';
 
 const Sunny = ({ onTheSide, size, theme }) => (
   <WeatherThemeProvider theme={theme}>

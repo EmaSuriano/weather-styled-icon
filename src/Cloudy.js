@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sun } from './Sunny';
 import { ThemePropType, defaultTheme } from './constants';
-import { Cloud, Icon, WeatherThemeProvider } from './components';
+import { Cloud, Icon, WeatherThemeProvider, Sun } from './components';
 
 const Cloudy = ({ patchy, size, theme }) => (
   <WeatherThemeProvider theme={theme}>

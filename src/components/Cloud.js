@@ -60,6 +60,8 @@ const Cloud = styled.div`
   }
 `;
 
+Cloud.displayName = 'Cloud';
+
 Cloud.propTypes = {
   theme: PropTypes.shape({
     cloudsColor: PropTypes.string,
