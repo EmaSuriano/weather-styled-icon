@@ -1,15 +1,10 @@
 {
   "name": "weather-styled-icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
+  "files": ["css", "es", "lib", "umd"],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -20,7 +15,7 @@
     "lint": "eslint src/**",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "gh-pages -d demo/dist"
+    "deploy": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -60,29 +55,16 @@
     "react-syntax-highlighter": "^7.0.0"
   },
   "jest": {
-    "setupFiles": [
-      "raf/polyfill",
-      "<rootDir>/config/test-setup.js"
-    ],
+    "setupFiles": ["raf/polyfill", "<rootDir>/config/test-setup.js"],
     "transform": {
       "^.+\\.js$": "<rootDir>/config/jest.transform.js"
     },
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/index.js"
-    ]
+    "moduleDirectories": ["node_modules"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}", "!src/index.js"]
   },
   "author": "emanuel.suriano",
   "homepage": "https://emasuriano.github.io/weather-styled-icon/",
   "license": "MIT",
   "repository": "https://github.com/EmaSuriano/weather-styled-icon",
-  "keywords": [
-    "react-component",
-    "weather",
-    "icon",
-    "styled-component"
-  ]
+  "keywords": ["react-component", "weather", "icon", "styled-component"]
 }
