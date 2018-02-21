@@ -54,6 +54,8 @@ const Drops = () => (
   </WeatherContainer>
 );
 
+Drops.displayName = 'Drops';
+
 Drops.propTypes = {
   theme: PropTypes.shape({
     dropsColor: PropTypes.string,

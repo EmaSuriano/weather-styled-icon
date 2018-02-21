@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemePropType, defaultTheme } from './constants';
 import {
   WeatherThemeProvider,
   Cloud,
@@ -23,12 +24,14 @@ Rain.propTypes = {
   lighting: PropTypes.bool,
   patchy: PropTypes.bool,
   size: PropTypes.number,
+  theme: ThemePropType,
 };
 
 Rain.defaultProps = {
   lighting: false,
   patchy: false,
   size: 1,
+  theme: defaultTheme,
 };
 
 export default Rain;
