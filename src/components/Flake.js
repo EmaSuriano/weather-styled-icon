@@ -16,7 +16,6 @@ const Flake = styled.div`
     left: 50%;
     margin: -1.5em 0 0 -1.0125em;
     color: ${props => props.theme.snowColor};
-    list-height: 1em;
     opacity: 0.4;
     animation: ${Spin} 8s linear infinite reverse;
   }

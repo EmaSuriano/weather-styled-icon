@@ -32,4 +32,6 @@ SunSphere.defaultProps = {
   onTheSide: false,
 };
 
+SunSphere.displayName = 'SunSphere';
+
 export default SunSphere;

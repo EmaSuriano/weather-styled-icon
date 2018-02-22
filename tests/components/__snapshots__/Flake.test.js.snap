@@ -9,7 +9,6 @@ exports[`<Flake /> should should render div with theme 1`] = `
   left: 50%;
   margin: -1.5em 0 0 -1.0125em;
   color: white;
-  list-height: 1em;
   opacity: 0.4;
   -webkit-animation: cZxgpV 8s linear infinite reverse;
   animation: cZxgpV 8s linear infinite reverse;
