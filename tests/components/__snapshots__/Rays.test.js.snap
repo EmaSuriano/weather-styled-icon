@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rays /> should should render div with theme 1`] = `
+.c0 {
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  display: block;
+  width: 0.375em;
+  height: 1.125em;
+  margin-left: -0.1875em;
+  border-radius: 0.25em;
+  background: yellow;
+  box-shadow: 0 5.375em yellow;
+}
+
+.c0:before,
+.c0:after {
+  content: '';
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  display: block;
+  width: 0.375em;
+  height: 1.125em;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-transform-origin: 50% 3.25em;
+  -ms-transform-origin: 50% 3.25em;
+  transform-origin: 50% 3.25em;
+  border-radius: 0.25em;
+  background: yellow;
+  box-shadow: 0 5.375em yellow;
+}
+
+.c0:before {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+<div
+  className="c0"
+/>
+`;

@@ -40,4 +40,6 @@ Rays.propTypes = {
   }),
 };
 
+Rays.displayName = 'Rays';
+
 export default Rays;
