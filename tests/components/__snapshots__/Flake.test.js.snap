@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flake /> should should render div with theme 1`] = `
+.c0:before,
+.c0:after {
+  content: '\\2744';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0 0 -1.0125em;
+  color: white;
+  list-height: 1em;
+  opacity: 0.4;
+  -webkit-animation: cZxgpV 8s linear infinite reverse;
+  animation: cZxgpV 8s linear infinite reverse;
+}
+
+.c0:after {
+  margin: -0.25em 0 0 -1em;
+  font-size: 1.5em;
+  opacity: 0.6;
+  -webkit-animation: cZxgpV 14s linear infinite;
+  animation: cZxgpV 14s linear infinite;
+}
+
+.c0:nth-child(2):before {
+  margin: -0.75em 0 0 0.15em;
+  font-size: 1.25em;
+  opacity: 0.4;
+  -webkit-animation: cZxgpV 10s linear infinite;
+  animation: cZxgpV 10s linear infinite;
+}
+
+.c0:nth-child(2):after {
+  margin: 0em 0 0 0.125em;
+  font-size: 2em;
+  opacity: 0.6;
+  -webkit-animation: cZxgpV 16s linear infinite reverse;
+  animation: cZxgpV 16s linear infinite reverse;
+}
+
+<div
+  className="c0"
+/>
+`;

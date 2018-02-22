@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Cloud /> should should render div with theme 1`] = `
+exports[`<Drop /> should should render div with theme 1`] = `
 .c0:after {
   content: '';
   position: absolute;
