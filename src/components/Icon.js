@@ -6,7 +6,7 @@ const Icon = styled.div`
   display: inline-block;
   height: 10em;
   width: 10em;
-  font-size: ${props => `${props.size}em`};
+  font-size: ${({ size }) => `${size}em`};
 `;
 
 Icon.displayName = 'Icon';

@@ -1,28 +1,28 @@
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const DropAnimation = props => keyframes`
+export const DropAnimation = ({ theme }) => keyframes`
 0% {
-  background: ${props.theme.dropsColor};
+  background: ${theme.dropsColor};
   box-shadow: 0.625em 0.875em 0 -0.125em rgba(255, 255, 255, 0.2),
     -0.875em 1.125em 0 -0.125em rgba(255, 255, 255, 0.2),
-    -1.375em -0.125em 0 ${props.theme.dropsColor};
+    -1.375em -0.125em 0 ${theme.dropsColor};
 }
 25% {
   box-shadow: 0.625em 0.875em 0 -0.125em rgba(255, 255, 255, 0.2),
-    -0.875em 1.125em 0 -0.125em ${props.theme.dropsColor},
+    -0.875em 1.125em 0 -0.125em ${theme.dropsColor},
     -1.375em -0.125em 0 rgba(255, 255, 255, 0.2);
 }
 50% {
   background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0.625em 0.875em 0 -0.125em ${props.theme.dropsColor},
+  box-shadow: 0.625em 0.875em 0 -0.125em ${theme.dropsColor},
     -0.875em 1.125em 0 -0.125em rgba(255, 255, 255, 0.2),
     -1.375em -0.125em 0 rgba(255, 255, 255, 0.2);
 }
 100% {
   box-shadow: 0.625em 0.875em 0 -0.125em rgba(255, 255, 255, 0.2),
     -0.875em 1.125em 0 -0.125em rgba(255, 255, 255, 0.2),
-    -1.375em -0.125em 0 ${props.theme.dropsColor};
+    -1.375em -0.125em 0 ${theme.dropsColor};
 }
 `;
 
@@ -36,7 +36,7 @@ const Drop = styled.div`
     width: 1.125em;
     height: 1.125em;
     margin: -1em 0 0 -0.25em;
-    background: ${props => props.theme.dropsColor};
+    background: ${({ theme }) => theme.dropsColor};
     border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
     box-shadow: 0.625em 0.875em 0 -0.125em rgba(255, 255, 255, 0.2),
       -0.875em 1.125em 0 -0.125em rgba(255, 255, 255, 0.2),
