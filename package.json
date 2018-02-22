@@ -18,6 +18,8 @@
     "deploy": "gh-pages -d storybook-static"
   },
   "dependencies": {
+    "enzyme-to-json": "^3.3.1",
+    "jest-styled-components": "^4.10.0",
     "prop-types": "^15.6.0",
     "react-fontawesome": "^1.6.1",
     "react-github-corner": "^2.1.0",
@@ -60,7 +62,8 @@
       "^.+\\.js$": "<rootDir>/config/jest.transform.js"
     },
     "moduleDirectories": ["node_modules"],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}", "!src/index.js"]
+    "collectCoverageFrom": ["src/**/*.{js,jsx}", "!src/index.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "author": "emanuel.suriano",
   "homepage": "https://emasuriano.github.io/weather-styled-icon/",

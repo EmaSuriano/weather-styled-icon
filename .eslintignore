@@ -1,0 +1,5 @@
+/config/**
+/.storybook/**
+/stories/**
+/tests/**
+!.eslintrc.js

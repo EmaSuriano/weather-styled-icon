@@ -18,4 +18,6 @@ WeatherContainer.propTypes = {
   }),
 };
 
+WeatherContainer.displayName = 'WeatherContainer';
+
 export default WeatherContainer;
