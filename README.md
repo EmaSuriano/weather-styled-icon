@@ -3,7 +3,6 @@
 [![Greenkeeper badge][greenkeeper-image]](https://greenkeeper.io/)
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Commitizen friendly][commitizen-image]][commitizen-url]
 [![Coveralls][coverrals-image]][coverrals-url]
 [![Storybook][storybook-image]][demo-link]
 
@@ -136,8 +135,6 @@ MIT.
 [greenkeeper-image]: https://badges.greenkeeper.io/EmaSuriano/weather-styled-icon.svg
 [npm-image]: https://badge.fury.io/js/weather-styled-icon.svg
 [npm-url]: https://www.npmjs.com/package/weather-styled-icon
-[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[commitizen-url]: http://commitizen.github.io/cz-cli/
 [travis-image]: https://travis-ci.org/EmaSuriano/weather-styled-icon.svg?branch=master
 [travis-url]: https://travis-ci.org/EmaSuriano/weather-styled-icon
 [wiki]: https://github.com/yourname/yourproject/wiki
