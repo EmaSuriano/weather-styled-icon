@@ -1,6 +1,6 @@
 {
   "name": "weather-styled-icon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,19 +23,16 @@
     "deploy": "gh-pages -d storybook-static"
   },
   "dependencies": {
-    "enzyme-to-json": "^3.3.1",
-    "jest-styled-components": "^4.10.0",
-    "prop-types": "^15.6.0",
-    "react-fontawesome": "^1.6.1",
-    "react-github-corner": "^2.1.0",
-    "styled-components": "^2.4.0",
-    "webfontloader": "^1.6.28"
+    "styled-components": "^2.4.0"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.13",
+    "jest-styled-components": "^4.10.0",
+    "enzyme-to-json": "^3.3.1",
+    "prop-types": "^15.6.0",
     "@storybook/addon-info": "^3.3.13",
     "@storybook/addon-links": "^3.3.13",
     "@storybook/addon-options": "^3.3.13",
