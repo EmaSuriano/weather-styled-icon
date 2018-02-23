@@ -139,6 +139,6 @@ MIT.
 [travis-url]: https://travis-ci.org/EmaSuriano/weather-styled-icon
 [wiki]: https://github.com/yourname/yourproject/wiki
 [storybook-image]: https://img.shields.io/badge/%F0%9F%93%93-Storybook-ff69b4.svg
-[demo-link]: https://emasuriano.github.io/weather-styled-icon
+[demo-link]: https://emasuriano.github.io/weather-styled-icon/?selectedKind=%40Welcome
 [coverrals-image]: https://coveralls.io/repos/github/EmaSuriano/weather-styled-icon/badge.svg?branch=master
 [coverrals-url]: https://coveralls.io/github/EmaSuriano/weather-styled-icon
