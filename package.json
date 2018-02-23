@@ -1,10 +1,15 @@
 {
   "name": "weather-styled-icon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": ["css", "es", "lib", "umd"],
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -54,17 +59,32 @@
     "react-syntax-highlighter": "^7.0.0"
   },
   "jest": {
-    "setupFiles": ["raf/polyfill", "<rootDir>/config/test-setup.js"],
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/config/test-setup.js"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/config/jest.transform.js"
     },
-    "moduleDirectories": ["node_modules"],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}", "!src/index.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "author": "emanuel.suriano",
   "homepage": "https://emasuriano.github.io/weather-styled-icon/",
   "license": "MIT",
   "repository": "https://github.com/EmaSuriano/weather-styled-icon",
-  "keywords": ["react-component", "weather", "icon", "styled-component"]
+  "keywords": [
+    "react-component",
+    "weather",
+    "icon",
+    "styled-component"
+  ]
 }
