@@ -5,6 +5,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Coveralls][coverrals-image]][coverrals-url]
 [![Storybook][storybook-image]][demo-link]
+[![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
 
 Animated and configurable weather icons made in React ⚛️, using styled-components 💅 and CSS3 Animations.
 
