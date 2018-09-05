@@ -2,5 +2,6 @@ import Sunny from './Sunny';
 import Rain from './Rain';
 import Snow from './Snow';
 import Cloudy from './Cloudy';
+import WeatherThemeProvider from './WeatherThemeProvider';
 
-export { Sunny, Rain, Snow, Cloudy };
+export { Sunny, Rain, Snow, Cloudy, WeatherThemeProvider };

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { ThemePropType, defaultTheme } from '../constants';
 
 const Rays = styled.div`
   position: absolute;
@@ -35,9 +35,11 @@ const Rays = styled.div`
 `;
 
 Rays.propTypes = {
-  theme: PropTypes.shape({
-    raysColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+Rays.defaultProps = {
+  theme: defaultTheme,
 };
 
 Rays.displayName = 'Rays';

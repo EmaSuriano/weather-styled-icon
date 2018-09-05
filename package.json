@@ -1,6 +1,6 @@
 {
   "name": "weather-styled-icon",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,16 +23,14 @@
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
-    "styled-components": "^3.2.0"
+    "styled-components": "^3.4.5"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.13",
-    "jest-styled-components": "^6.0.0",
-    "enzyme-to-json": "^3.3.1",
-    "prop-types": "^15.6.0",
     "@storybook/addon-info": "^3.3.13",
     "@storybook/addon-links": "^3.3.13",
     "@storybook/addon-options": "^3.3.13",
@@ -44,13 +42,15 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.5.1",
     "enzyme-adapter-react-16": "^1.4.0",
-    "eslint-config-airbnb": "^17.0.0",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "^5.0.0",
+    "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "gh-pages": "^1.1.0",
     "jest": "^22.3.0",
+    "jest-styled-components": "^6.0.0",
     "nwb": "~0.22.0",
     "path": "^0.12.7",
     "raf": "^3.4.0",

@@ -1,18 +1,7 @@
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-
-const CloudAnimation = keyframes`
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.5) translate(-200%, -3em);
-  }
-`;
+import styled from 'styled-components';
+import Pan from './animations/Pan';
+import { ThemePropType, defaultTheme } from '../constants';
 
 const Cloud = styled.div`
   position: absolute;
@@ -52,7 +41,7 @@ const Cloud = styled.div`
       2.0625em 0.9375em 0 -0.5625em ${({ theme }) => theme.cloudsColor};
     opacity: 0.6;
     transform: scale(0.5) translate(6em, -3em);
-    animation: ${CloudAnimation} 4s linear infinite;
+    animation: ${Pan} 4s linear infinite;
   }
 
   &:nth-child(2):after {
@@ -63,10 +52,11 @@ const Cloud = styled.div`
 Cloud.displayName = 'Cloud';
 
 Cloud.propTypes = {
-  theme: PropTypes.shape({
-    cloudsColor: PropTypes.string,
-    backgroundColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+Cloud.defaultProps = {
+  theme: defaultTheme,
 };
 
 export default Cloud;

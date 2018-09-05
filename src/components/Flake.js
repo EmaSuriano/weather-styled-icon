@@ -1,11 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import PropTypes from 'prop-types';
-
-const Spin = keyframes`
-100% {
-  transform: rotate(360deg);
-}
-`;
+import styled from 'styled-components';
+import Spin from './animations/Spin';
+import { ThemePropType, defaultTheme } from '../constants';
 
 const Flake = styled.div`
   &:before,
@@ -40,9 +35,11 @@ const Flake = styled.div`
 `;
 
 Flake.propTypes = {
-  theme: PropTypes.shape({
-    snowColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+Flake.defaultProps = {
+  theme: defaultTheme,
 };
 
 Flake.displayName = 'Flake';

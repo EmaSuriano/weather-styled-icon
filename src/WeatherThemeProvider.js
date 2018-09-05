@@ -3,18 +3,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { ThemePropType, defaultTheme } from '../constants';
+import { ThemePropType, defaultTheme } from './constants';
 
-const WeatherThemeProvider = ({ theme, children }) => {
-  const themeToApply =
-    theme !== defaultTheme
-      ? {
-          ...defaultTheme,
-          ...theme,
-        }
-      : defaultTheme;
-  return <ThemeProvider theme={themeToApply}>{children}</ThemeProvider>;
-};
+const WeatherThemeProvider = ({ theme, children }) => (
+  <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
+    {children}
+  </ThemeProvider>
+);
 
 WeatherThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,27 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemePropType, defaultTheme } from './constants';
-import { Cloud, Icon, WeatherThemeProvider, Sun } from './components';
+import { Cloud, Icon, SunSphere, Rays } from './components';
 
-const Cloudy = ({ patchy, size, theme }) => (
-  <WeatherThemeProvider theme={theme}>
-    <Icon size={size}>
-      <Cloud key="cloud" />
-      {patchy ? <Sun onTheSide /> : <Cloud />}
-    </Icon>
-  </WeatherThemeProvider>
+const Cloudy = ({ patchy, size }) => (
+  <Icon size={size}>
+    <Cloud key="cloud" />
+    {patchy ? (
+      <Icon>
+        <SunSphere onTheSide>
+          <Rays />
+        </SunSphere>
+      </Icon>
+    ) : (
+      <Cloud />
+    )}
+  </Icon>
 );
 
 Cloudy.propTypes = {
   patchy: PropTypes.bool,
   size: PropTypes.number,
-  theme: ThemePropType,
 };
 
 Cloudy.defaultProps = {
   patchy: false,
   size: 1,
-  theme: defaultTheme,
 };
 
 export default Cloudy;

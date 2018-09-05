@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { Sunny } from '../src';
+import { Sunny, WeatherThemeProvider } from '../src';
 import { BackgroundContainer, CenteredContainer } from './Container';
 
 storiesOf('Sunny', module)
@@ -15,12 +15,13 @@ storiesOf('Sunny', module)
   ])
   .add('with theme', () => (
     <BackgroundContainer color="peachPuff">
-      <Sunny
+      <WeatherThemeProvider
         theme={{
           sunColor: 'SkyBlue',
           raysColor: 'SlateBlue',
           backgroundColor: 'peachPuff',
-        }}
-      />
+        }}>
+        <Sunny />
+      </WeatherThemeProvider>
     </BackgroundContainer>
   ));
