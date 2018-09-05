@@ -25,10 +25,10 @@ npm install weather-styled-icon
 
 The library exports in total 4 icons, each one can be configurable by props:
 
-* [Sunny](#Sunny)
-* [Cloudy](#Cloudy)
-* [Rain](#Rain)
-* [Snow](#Snow)
+* [Sunny](#sunny)
+* [Cloudy](#cloudy)
+* [Rain](#rain)
+* [Snow](#snow)
 
 ### Sunny
 
