@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { Cloudy } from '../src';
-import { BackgroundContainer, CenteredContainer } from './Container';
+import { centeredDecorator, themeDecorator } from './decorators';
 
 storiesOf('Cloudy', module)
-  .addDecorator(story => <CenteredContainer>{story()}</CenteredContainer>)
+  .addDecorator(centeredDecorator)
   .addDecorator((story, context) => withInfo('Cloudy')(story)(context))
   .add('default', () => <Cloudy />)
   .add('different sizes', () => [
@@ -13,24 +13,9 @@ storiesOf('Cloudy', module)
     <Cloudy />,
     <Cloudy size="1.5" />,
   ])
-  .add('with theme', () => (
-    <BackgroundContainer color="honeyDew">
-      <Cloudy
-        theme={{ cloudsColor: 'greenYellow', backgroundColor: 'honeyDew' }}
-      />
-    </BackgroundContainer>
-  ))
   .add('patchy', () => <Cloudy patchy />)
-  .add('patchy with theme', () => (
-    <BackgroundContainer color="honeyDew">
-      <Cloudy
-        patchy
-        theme={{
-          cloudsColor: 'greenYellow',
-          backgroundColor: 'honeyDew',
-          sunColor: 'hotPink',
-          raysColor: 'indianRed',
-        }}
-      />
-    </BackgroundContainer>
-  ));
+  .addDecorator(
+    themeDecorator({ cloudsColor: 'greenYellow', backgroundColor: 'honeyDew' }),
+  )
+  .add('with theme', () => <Cloudy />)
+  .add('patchy with theme', () => <Cloudy patchy />);

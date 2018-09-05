@@ -2,12 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { Snow } from '../src';
-import { BackgroundContainer, CenteredContainer } from './Container';
+import { centeredDecorator, themeDecorator } from './decorators';
 
-const backgroundColor = 'PaleGoldenRod';
 
 storiesOf('Snow', module)
-  .addDecorator(story => <CenteredContainer>{story()}</CenteredContainer>)
+  .addDecorator(centeredDecorator)
   .addDecorator((story, context) => withInfo('Snow')(story)(context))
   .add('default', () => <Snow />)
   .add('different sizes', () => [
@@ -15,29 +14,15 @@ storiesOf('Snow', module)
     <Snow />,
     <Snow size="1.5" />,
   ])
-  .add('with theme', () => (
-    <BackgroundContainer color={backgroundColor}>
-      <Snow
-        theme={{
-          cloudsColor: 'RoyalBlue ',
-          snowColor: 'SeaGreen ',
-          backgroundColor,
-        }}
-      />
-    </BackgroundContainer>
-  ))
   .add('patchy', () => <Snow patchy />)
-  .add('patchy with theme', () => (
-    <BackgroundContainer color={backgroundColor}>
-      <Snow
-        patchy
-        theme={{
-          cloudsColor: 'RoyalBlue ',
-          snowColor: 'SeaGreen ',
-          backgroundColor,
-          sunColor: 'Purple',
-          raysColor: 'RebeccaPurple',
-        }}
-      />
-    </BackgroundContainer>
-  ));
+  .addDecorator(
+    themeDecorator({
+      cloudsColor: 'RoyalBlue ',
+      snowColor: 'SeaGreen ',
+      backgroundColor: 'PaleGoldenRod',
+      sunColor: 'Purple',
+      raysColor: 'RebeccaPurple',
+    }),
+  )
+  .add('with theme', () => <Snow />)
+  .add('patchy with theme', () => <Snow patchy />);
