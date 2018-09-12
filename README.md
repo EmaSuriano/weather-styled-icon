@@ -68,10 +68,16 @@ _For more examples and usage, please refer to the [Storybook][demo-link]._
 
 ## Theming
 
-All the icons of the library are easy to style. Just by rendering `ThemeProvider` before the use of the icons, they will pick the pallete from the theme.
+All the icons of the library are easy to style. Just by rendering `WeatherThemeProvider` before the use of the icons, they will pick the pallete from the theme.
 
 ```javascript
-import { ThemeProvider, Sunny, Rain, Snow, Cloudy } from 'weather-styled-icons';
+import {
+  WeatherThemeProvider,
+  Sunny,
+  Rain,
+  Snow,
+  Cloudy,
+} from 'weather-styled-icons';
 
 const theme = {
   cloudsColor: 'MidnightBlue',
@@ -83,12 +89,12 @@ const theme = {
 };
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <WeatherThemeProvider theme={theme}>
     <Sunny />
     <Cloudy />
     <Rain />
     <Snowy />
-  </ThemeProvider>
+  </WeatherThemeProvider>
 );
 ```
 
