@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cloud, Icon, SunSphere, Rays } from './components';
+import { Cloud, Icon, Patchy } from './components';
+import Sunny from './Sunny';
 
 const Cloudy = ({ patchy, size }) => (
   <Icon size={size}>
     <Cloud key="cloud" />
     {patchy ? (
-      <Icon>
-        <SunSphere onTheSide>
-          <Rays />
-        </SunSphere>
-      </Icon>
+      <Patchy>
+        <Sunny />
+      </Patchy>
     ) : (
       <Cloud />
     )}

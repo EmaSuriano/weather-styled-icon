@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cloud, Snowing, Icon, SunSphere, Rays } from './components';
+import Sunny from './Sunny';
+import { Cloud, Snowing, Icon, Patchy } from './components';
 
 const Snow = ({ patchy, size }) => (
   <Icon size={size}>
     <Cloud />
     {patchy && (
-      <Icon>
-        <SunSphere onTheSide>
-          <Rays />
-        </SunSphere>
-      </Icon>
+      <Patchy>
+        <Sunny />
+      </Patchy>
     )}
     <Snowing />
   </Icon>

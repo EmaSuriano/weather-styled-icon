@@ -28,7 +28,7 @@ exports[`<SunSphere /> should render with margin when onTheSide is true 1`] = `
   width: 2.5em;
   height: 2.5em;
   background: white;
-  margin: -2em 1em;
+  margin: -1.25em;
   border-radius: 50%;
   box-shadow: 0 0 0 0.375em red;
   -webkit-animation: cZxgpV 12s infinite linear;
