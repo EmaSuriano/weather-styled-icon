@@ -15,11 +15,6 @@ describe('<SunSphere />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with margin when onTheSide is true', () => {
-    const wrapper = shallow(<SunSphere theme={theme} onTheSide />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   xit('Spin should return keyframes with theme', () => {
     // TOOD: Find a proper way to test Animations!
   });
