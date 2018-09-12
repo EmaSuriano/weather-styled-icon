@@ -16,9 +16,12 @@ const Rain = ({ lighting, patchy, size }) => (
 );
 
 Rain.propTypes = {
-  lighting: PropTypes.bool,
-  patchy: PropTypes.bool,
+  /** Icon size */
   size: PropTypes.number,
+  /** Display Bolts */
+  lighting: PropTypes.bool,
+  /** Display Sun */
+  patchy: PropTypes.bool,
 };
 
 Rain.defaultProps = {

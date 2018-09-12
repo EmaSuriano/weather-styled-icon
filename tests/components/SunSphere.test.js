@@ -1,5 +1,5 @@
 import React from 'react';
-import SunSphere, { Spin } from '../../src/components/SunSphere';
+import SunSphere from '../../src/components/SunSphere';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 

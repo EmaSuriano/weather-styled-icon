@@ -17,8 +17,10 @@ const Cloudy = ({ patchy, size }) => (
 );
 
 Cloudy.propTypes = {
-  patchy: PropTypes.bool,
+  /** Icon Sun */
   size: PropTypes.number,
+  /** Display Sun */
+  patchy: PropTypes.bool,
 };
 
 Cloudy.defaultProps = {

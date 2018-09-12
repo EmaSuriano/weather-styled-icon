@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import PropTypes from 'prop-types';
 import { ThemePropType, defaultTheme } from '../constants';
 
 export const DropAnimation = ({ theme }) => keyframes`

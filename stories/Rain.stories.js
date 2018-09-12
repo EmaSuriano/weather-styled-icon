@@ -5,6 +5,7 @@ import { createWeatherStory } from './utils';
 const theme = {
   cloudsColor: 'MidnightBlue',
   dropsColor: 'white',
+  boltColor: 'lightBlue',
   backgroundColor: 'Lavender',
   sunColor: 'Orange',
   raysColor: 'OrangeRed',

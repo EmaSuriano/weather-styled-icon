@@ -25,22 +25,15 @@ npm install weather-styled-icon
 
 The library exports in total 4 icons, each one can be configurable by props:
 
-* [Sunny](#sunny)
-* [Cloudy](#cloudy)
-* [Rain](#rain)
-* [Snow](#snow)
+- [Sunny](#sunny)
+- [Cloudy](#cloudy)
+- [Rain](#rain)
+- [Snow](#snow)
 
 ### Sunny
 
 ```javascript
-<Sunny
-  size={1}
-  theme={{
-    sunColor: 'SkyBlue',
-    raysColor: 'SlateBlue',
-    backgroundColor: 'peachPuff',
-  }}
-/>
+<Sunny size={1} />
 ```
 
 ### Cloudy
@@ -49,12 +42,6 @@ The library exports in total 4 icons, each one can be configurable by props:
 <Cloudy
   size={1}
   patchy // Show the sun at a side of the cloud
-  theme={{
-    cloudsColor: 'greenYellow',
-    backgroundColor: 'honeyDew',
-    sunColor: 'hotPink',
-    raysColor: 'indianRed',
-  }}
 />
 ```
 
@@ -65,13 +52,6 @@ The library exports in total 4 icons, each one can be configurable by props:
   size={1}
   patchy // Show the sun at a side of the cloud
   lighting // Show rays instead of drops falling of the cloud
-  theme={{
-    cloudsColor: 'MidnightBlue',
-    boltColor: 'yellow',
-    backgroundColor,
-    sunColor: 'Orange',
-    raysColor: 'OrangeRed',
-  }}
 />
 ```
 
@@ -81,42 +61,35 @@ The library exports in total 4 icons, each one can be configurable by props:
 <Snow
   size={1}
   patchy // Show the sun at a side of the cloud
-  theme={{
-    cloudsColor: 'RoyalBlue ',
-    snowColor: 'SeaGreen ',
-    backgroundColor,
-    sunColor: 'Purple',
-    raysColor: 'RebeccaPurple',
-  }}
 />
 ```
 
 _For more examples and usage, please refer to the [Storybook][demo-link]._
 
-## Development setup
+## Theming
 
-### Installing dependencies
+All the icons of the library are easy to style. Just by rendering `ThemeProvider` before the use of the icons, they will pick the pallete from the theme.
 
-```sh
-npm install
-```
+```javascript
+import { ThemeProvider, Sunny, Rain, Snow, Cloudy } from 'weather-styled-icons';
 
-### Running tests
+const theme = {
+  cloudsColor: 'MidnightBlue',
+  dropsColor: 'white',
+  boltColor: 'lightBlue',
+  backgroundColor: 'Lavender',
+  sunColor: 'Orange',
+  raysColor: 'OrangeRed',
+};
 
-```sh
-npm test
-```
-
-### Starting storybook
-
-```sh
-npm run storybook
-```
-
-### Checking lint
-
-```sh
-npm run lint
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <Sunny />
+    <Cloudy />
+    <Rain />
+    <Snow />
+  </ThemeProvider>
+);
 ```
 
 ## Licence

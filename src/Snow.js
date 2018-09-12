@@ -16,8 +16,10 @@ const Snow = ({ patchy, size }) => (
 );
 
 Snow.propTypes = {
-  patchy: PropTypes.bool,
+  /** Icon size */
   size: PropTypes.number,
+  /** Display Sunny */
+  patchy: PropTypes.bool,
 };
 
 Snow.defaultProps = {

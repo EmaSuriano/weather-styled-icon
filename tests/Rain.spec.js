@@ -29,11 +29,8 @@ describe('<Rain />', () => {
 
   it('should render Cloud and Sun when patchy is true', () => {
     wrapper.setProps({ patchy: true });
-    const clouds = wrapper.find('Cloud');
-    const sun = wrapper.find('Sun');
 
-    expect(clouds).toHaveLength(1);
-    expect(sun).toHaveLength(1);
-    expect(sun.prop('onTheSide')).toBe(true);
+    expect(wrapper.find('Cloud')).toHaveLength(1);
+    expect(wrapper.find('Sunny')).toHaveLength(1);
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import WeatherThemeProvider from '../../src/components/WeatherThemeProvider';
+import WeatherThemeProvider from '../../src/WeatherThemeProvider';
 import { defaultTheme } from '../../src/constants';
 
 describe('<WeatherThemeProvider />', () => {

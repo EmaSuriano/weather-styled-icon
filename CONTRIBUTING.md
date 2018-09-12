@@ -18,8 +18,14 @@
 
 - `npm run test:watch` will run the tests on every change.
 
-## Building
+## Starting storybook
 
-- `npm run build` will build the component for publishing to npm and also bundle the demo app.
+```sh
+npm run storybook
+```
 
-- `npm run clean` will delete built resources.
+## Checking lint
+
+```sh
+npm run lint
+```

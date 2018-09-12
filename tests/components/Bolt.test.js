@@ -1,5 +1,5 @@
 import React from 'react';
-import Bolt, { BoltAnimation } from '../../src/components/Bolt';
+import Bolt from '../../src/components/Bolt';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 

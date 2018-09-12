@@ -11,6 +11,7 @@ const Sunny = ({ size }) => (
 );
 
 Sunny.propTypes = {
+  /** Icon Size */
   size: PropTypes.number,
 };
 
