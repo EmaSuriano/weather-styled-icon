@@ -87,7 +87,7 @@ const App = () => (
     <Sunny />
     <Cloudy />
     <Rain />
-    <Snow />
+    <Snowy />
   </ThemeProvider>
 );
 ```
