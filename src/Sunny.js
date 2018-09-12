@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sun, WeatherThemeProvider } from './components';
-import { ThemePropType, defaultTheme } from './constants';
+import { SunSphere, Rays, Icon } from './components';
 
-const Sunny = ({ size, theme }) => (
-  <WeatherThemeProvider theme={theme}>
-    <Sun size={size} />
-  </WeatherThemeProvider>
+const Sunny = ({ size }) => (
+  <Icon size={size}>
+    <SunSphere>
+      <Rays />
+    </SunSphere>
+  </Icon>
 );
 
 Sunny.propTypes = {
+  /** Icon Size */
   size: PropTypes.number,
-  theme: ThemePropType,
 };
 
 Sunny.defaultProps = {
   size: 1,
-  theme: defaultTheme,
 };
 
 export default Sunny;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Flake, { Spin } from '../../src/components/Flake';
+import Flake from '../../src/components/Flake';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 

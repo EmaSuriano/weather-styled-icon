@@ -19,23 +19,3 @@ exports[`<SunSphere /> should render div with theme 1`] = `
   className="c0"
 />
 `;
-
-exports[`<SunSphere /> should render with margin when onTheSide is true 1`] = `
-.c0 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2.5em;
-  height: 2.5em;
-  background: white;
-  margin: -2em 1em;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.375em red;
-  -webkit-animation: cZxgpV 12s infinite linear;
-  animation: cZxgpV 12s infinite linear;
-}
-
-<div
-  className="c0"
-/>
-`;

@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import PropTypes from 'prop-types';
+import { ThemePropType, defaultTheme } from '../constants';
 
 const BoltAnimation = ({ theme }) => keyframes`
 45% {
@@ -75,9 +75,11 @@ const Bolt = styled.div`
 `;
 
 Bolt.propTypes = {
-  theme: PropTypes.shape({
-    boltColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+Bolt.defaultProps = {
+  theme: defaultTheme,
 };
 
 Bolt.displayName = 'Bolt';

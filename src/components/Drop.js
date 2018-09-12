@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import PropTypes from 'prop-types';
+import { ThemePropType, defaultTheme } from '../constants';
 
 export const DropAnimation = ({ theme }) => keyframes`
 0% {
@@ -47,9 +47,11 @@ const Drop = styled.div`
 `;
 
 Drop.propTypes = {
-  theme: PropTypes.shape({
-    dropsColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+Drop.defaultProps = {
+  theme: defaultTheme,
 };
 
 Drop.displayName = 'Drop';

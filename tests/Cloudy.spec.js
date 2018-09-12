@@ -8,16 +8,6 @@ describe('<Cloudy />', () => {
   beforeEach(() => {
     wrapper = shallow(<Cloudy theme={{ cloudsColor: 'white' }} size={2} />);
   });
-
-  it('should render WeatherThemeProvider with theme', () => {
-    const weatherThemeProvider = wrapper.find('WeatherThemeProvider');
-
-    expect(weatherThemeProvider.exists()).toBe(true);
-    expect(weatherThemeProvider.prop('theme')).toEqual({
-      cloudsColor: 'white',
-    });
-  });
-
   it('should render Icon with size', () => {
     const icon = wrapper.find('Icon');
 
@@ -35,11 +25,7 @@ describe('<Cloudy />', () => {
 
   it('should render Cloud and Sun when patchy is true', () => {
     wrapper.setProps({ patchy: true });
-    const clouds = wrapper.find('Cloud');
-    const sun = wrapper.find('Sun');
-
-    expect(clouds).toHaveLength(1);
-    expect(sun).toHaveLength(1);
-    expect(sun.prop('onTheSide')).toBe(true);
+    expect(wrapper.find('Cloud')).toHaveLength(1);
+    expect(wrapper.find('Sunny')).toHaveLength(1);
   });
 });

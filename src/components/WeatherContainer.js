@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { ThemePropType, defaultTheme } from '../constants';
 
 const WeatherContainer = styled.div`
   position: absolute;
@@ -13,9 +13,11 @@ const WeatherContainer = styled.div`
 `;
 
 WeatherContainer.propTypes = {
-  theme: PropTypes.shape({
-    backgroundColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
+};
+
+WeatherContainer.defaultProps = {
+  theme: defaultTheme,
 };
 
 WeatherContainer.displayName = 'WeatherContainer';

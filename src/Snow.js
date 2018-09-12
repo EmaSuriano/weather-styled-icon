@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cloud, Snowing, Icon, WeatherThemeProvider, Sun } from './components';
-import { ThemePropType, defaultTheme } from './constants';
+import Sunny from './Sunny';
+import { Cloud, Snowing, Icon, Patchy } from './components';
 
-const Snow = ({ patchy, size, theme }) => (
-  <WeatherThemeProvider theme={theme}>
-    <Icon size={size}>
-      <Cloud />
-      {patchy && <Sun onTheSide />}
-      <Snowing />
-    </Icon>
-  </WeatherThemeProvider>
+const Snow = ({ patchy, size }) => (
+  <Icon size={size}>
+    <Cloud />
+    {patchy && (
+      <Patchy>
+        <Sunny />
+      </Patchy>
+    )}
+    <Snowing />
+  </Icon>
 );
 
 Snow.propTypes = {
-  patchy: PropTypes.bool,
+  /** Icon size */
   size: PropTypes.number,
-  theme: ThemePropType,
+  /** Display Sunny */
+  patchy: PropTypes.bool,
 };
 
 Snow.defaultProps = {
   patchy: false,
   size: 1,
-  theme: defaultTheme,
 };
 
 export default Snow;

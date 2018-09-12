@@ -1,5 +1,5 @@
 import React from 'react';
-import Drop, { DropAnimation } from '../../src/components/Drop';
+import Drop from '../../src/components/Drop';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 

@@ -1,11 +1,6 @@
-import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-
-const Spin = keyframes`
-  100% {
-    transform: rotate(360deg);
-  }
-`;
+import styled from 'styled-components';
+import { ThemePropType, defaultTheme } from '../constants';
+import Spin from './animations/Spin';
 
 const SunSphere = styled.div`
   position: absolute;
@@ -14,22 +9,18 @@ const SunSphere = styled.div`
   width: 2.5em;
   height: 2.5em;
   background: ${({ theme }) => theme.backgroundColor};
-  margin: ${({ onTheSide }) => (onTheSide ? '-2em 1em' : '-1.25em')};
+  margin: -1.25em;
   border-radius: 50%;
   box-shadow: 0 0 0 0.375em ${({ theme }) => theme.sunColor};
   animation: ${Spin} 12s infinite linear;
 `;
 
 SunSphere.propTypes = {
-  onTheSide: PropTypes.bool,
-  theme: PropTypes.shape({
-    sunColor: PropTypes.string,
-    backgroundColor: PropTypes.string,
-  }),
+  theme: ThemePropType,
 };
 
 SunSphere.defaultProps = {
-  onTheSide: false,
+  theme: defaultTheme,
 };
 
 SunSphere.displayName = 'SunSphere';

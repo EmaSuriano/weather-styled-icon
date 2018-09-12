@@ -1,37 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemePropType, defaultTheme } from './constants';
-import {
-  WeatherThemeProvider,
-  Cloud,
-  Lighting,
-  Drops,
-  Icon,
-  Sun,
-} from './components';
+import { Cloud, Lighting, Drops, Icon, Patchy } from './components';
+import Sunny from './Sunny';
 
-const Rain = ({ lighting, patchy, size, theme }) => (
-  <WeatherThemeProvider theme={theme}>
-    <Icon size={size}>
-      <Cloud />
-      {patchy && <Sun onTheSide />}
-      {lighting ? <Lighting /> : <Drops />}
-    </Icon>
-  </WeatherThemeProvider>
+const Rain = ({ lighting, patchy, size }) => (
+  <Icon size={size}>
+    <Cloud />
+    {patchy && (
+      <Patchy>
+        <Sunny />
+      </Patchy>
+    )}
+    {lighting ? <Lighting /> : <Drops />}
+  </Icon>
 );
 
 Rain.propTypes = {
-  lighting: PropTypes.bool,
-  patchy: PropTypes.bool,
+  /** Icon size */
   size: PropTypes.number,
-  theme: ThemePropType,
+  /** Display Bolts */
+  lighting: PropTypes.bool,
+  /** Display Sun */
+  patchy: PropTypes.bool,
 };
 
 Rain.defaultProps = {
   lighting: false,
   patchy: false,
   size: 1,
-  theme: defaultTheme,
 };
 
 export default Rain;
