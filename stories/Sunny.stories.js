@@ -1,23 +1,17 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { Sunny } from '../src';
-import { centeredDecorator, themeDecorator } from './decorators';
+import { createWeatherStory } from './utils';
 
-storiesOf('Sunny', module)
-  .addDecorator(centeredDecorator)
-  .addDecorator((story, context) => withInfo('Sunny')(story)(context))
-  .add('default', () => <Sunny />)
-  .add('different sizes', () => [
+const theme = {
+  sunColor: 'SkyBlue',
+  raysColor: 'SlateBlue',
+  backgroundColor: 'peachPuff',
+};
+
+createWeatherStory('Sunny', theme)
+  .add('Default', () => <Sunny />)
+  .add('Different sizes', () => [
     <Sunny size="0.5" />,
     <Sunny />,
     <Sunny size="1.5" />,
-  ])
-  .addDecorator(
-    themeDecorator({
-      sunColor: 'SkyBlue',
-      raysColor: 'SlateBlue',
-      backgroundColor: 'peachPuff',
-    }),
-  )
-  .add('with theme', () => <Sunny />);
+  ]);

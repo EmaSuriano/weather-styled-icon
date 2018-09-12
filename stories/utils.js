@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { storiesOf } from '@storybook/react';
 import { WeatherThemeProvider } from '../src';
+import { withInfo } from '@storybook/addon-info';
 
 const CenteredContainer = styled.div`
   text-align: center;
@@ -28,3 +30,26 @@ export const themeDecorator = theme => story => (
     <WeatherThemeProvider theme={theme}>{story()}</WeatherThemeProvider>
   </BackgroundContainer>
 );
+
+export const createWeatherStory = (weather, theme) => {
+  const createStory = name =>
+    storiesOf(name, module)
+      .addDecorator((story, context) => withInfo(name)(story)(context))
+      .addDecorator(centeredDecorator);
+
+  const story = createStory(weather);
+
+  const storyWithTheme = createStory(`${weather}/withTheme`).addDecorator(
+    themeDecorator(theme),
+  );
+
+  function add(...args) {
+    story.add(...args);
+    storyWithTheme.add(...args);
+    return { add };
+  }
+
+  return {
+    add,
+  };
+};

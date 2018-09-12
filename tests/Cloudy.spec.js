@@ -8,16 +8,6 @@ describe('<Cloudy />', () => {
   beforeEach(() => {
     wrapper = shallow(<Cloudy theme={{ cloudsColor: 'white' }} size={2} />);
   });
-
-  it('should render WeatherThemeProvider with theme', () => {
-    const weatherThemeProvider = wrapper.find('WeatherThemeProvider');
-
-    expect(weatherThemeProvider.exists()).toBe(true);
-    expect(weatherThemeProvider.prop('theme')).toEqual({
-      cloudsColor: 'white',
-    });
-  });
-
   it('should render Icon with size', () => {
     const icon = wrapper.find('Icon');
 

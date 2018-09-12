@@ -5,18 +5,23 @@ import { Sunny, Rain, Snow, Cloudy } from '../src';
 
 const WelcomeContainer = styled.div`
   margin: 15px;
-  max-width: 600px;
   line-height: 1.4;
   font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans,
     sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const WelcomeStoryBook = () => (
   <WelcomeContainer>
-    <Sunny size="0.9" />
-    <Cloudy size="0.9" />
-    <Rain size="0.9" />
-    <Snow size="0.9" />
+    <div>
+      <Sunny />
+      <Cloudy />
+      <Rain />
+      <Snow />
+    </div>
 
     <h1>Welcome to Weather Styled Icon!</h1>
     <p>This a collection of weather icons built with React</p>
