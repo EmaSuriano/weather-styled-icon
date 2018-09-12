@@ -92,6 +92,8 @@ const App = () => (
 );
 ```
 
+[![Edit weather-styled-icon-theming](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xlklnkoq4q)
+
 ## Licence
 
 MIT.
