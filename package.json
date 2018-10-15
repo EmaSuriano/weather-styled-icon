@@ -23,7 +23,7 @@
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
-    "styled-components": "^3.4.5"
+    "styled-components": "^4.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",
