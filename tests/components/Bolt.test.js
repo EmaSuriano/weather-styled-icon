@@ -1,12 +1,11 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import Bolt from '../../src/components/Bolt';
-import defaultTheme from '../../src/constants/defaultTheme';
+import { renderWithTheme } from '../utils';
 
 describe('<Bolt />', () => {
   it('should should render div with theme', () => {
-    const tree = renderer.create(<Bolt theme={defaultTheme} />).toJSON();
+    const tree = renderWithTheme(<Bolt />);
     expect(tree).toMatchSnapshot();
   });
 
