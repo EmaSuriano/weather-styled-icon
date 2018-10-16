@@ -1,14 +1,12 @@
 import React from 'react';
-import Cloud from '../../src/components/Cloud';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+import Cloud from '../../src/components/Cloud';
+import defaultTheme from '../../src/constants/defaultTheme';
 
 describe('<Cloud />', () => {
   it('should should render div with theme', () => {
-    const wrapper = shallow(
-      <Cloud theme={{ cloudsColor: 'yellow', backgroundColor: 'red' }} />,
-    );
-
-    expect(wrapper).toMatchSnapshot();
+    const tree = renderer.create(<Cloud theme={defaultTheme} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

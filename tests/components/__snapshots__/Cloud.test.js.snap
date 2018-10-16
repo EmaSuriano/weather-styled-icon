@@ -9,9 +9,9 @@ exports[`<Cloud /> should should render div with theme 1`] = `
   width: 3.6875em;
   height: 3.6875em;
   margin: -1.84375em;
-  background: red;
+  background: #FFFFFF;
   border-radius: 50%;
-  box-shadow: -2.1875em 0.6875em 0 -0.6875em red, 2.0625em 0.9375em 0 -0.9375em red, 0 0 0 0.375em yellow, -2.1875em 0.6875em 0 -0.3125em yellow, 2.0625em 0.9375em 0 -0.5625em yellow;
+  box-shadow: -2.1875em 0.6875em 0 -0.6875em #FFFFFF, 2.0625em 0.9375em 0 -0.9375em #FFFFFF, 0 0 0 0.375em #607D8B, -2.1875em 0.6875em 0 -0.3125em #607D8B, 2.0625em 0.9375em 0 -0.5625em #607D8B;
 }
 
 .c0:after {
@@ -22,14 +22,14 @@ exports[`<Cloud /> should should render div with theme 1`] = `
   display: block;
   width: 4.5625em;
   height: 1em;
-  background: red;
-  box-shadow: 0 0.4375em 0 -0.0625em yellow;
+  background: #FFFFFF;
+  box-shadow: 0 0.4375em 0 -0.0625em #607D8B;
 }
 
 .c0:nth-child(2) {
   z-index: 0;
-  background: yellow;
-  box-shadow: -2.1875em 0.6875em 0 -0.6875em yellow, 2.0625em 0.9375em 0 -0.9375em yellow, 0 0 0 0.375em yellow, -2.1875em 0.6875em 0 -0.3125em yellow, 2.0625em 0.9375em 0 -0.5625em yellow;
+  background: #607D8B;
+  box-shadow: -2.1875em 0.6875em 0 -0.6875em #607D8B, 2.0625em 0.9375em 0 -0.9375em #607D8B, 0 0 0 0.375em #607D8B, -2.1875em 0.6875em 0 -0.3125em #607D8B, 2.0625em 0.9375em 0 -0.5625em #607D8B;
   opacity: 0.6;
   -webkit-transform: scale(0.5) translate(6em,-3em);
   -ms-transform: scale(0.5) translate(6em,-3em);
@@ -39,7 +39,7 @@ exports[`<Cloud /> should should render div with theme 1`] = `
 }
 
 .c0:nth-child(2):after {
-  background: yellow;
+  background: #607D8B;
 }
 
 <div
