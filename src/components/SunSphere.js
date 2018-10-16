@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { ThemePropType, defaultTheme } from '../constants';
 import Spin from './animations/Spin';
 
-const SunSphere = styled.div`
+const SunSphere = styled.div.attrs({
+  'data-e2e': 'sun-phere',
+})`
   position: absolute;
   top: 50%;
   left: 50%;

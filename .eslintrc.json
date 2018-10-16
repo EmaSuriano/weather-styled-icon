@@ -3,7 +3,8 @@
   "rules": {
     "react/jsx-filename-extension": "off",
     "function-paren-newline": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "implicit-arrow-linebreak": "off"
   },
   "env": {
     "browser": true,

@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import Spin from './animations/Spin';
 import { ThemePropType, defaultTheme } from '../constants';
 
-const Flake = styled.div`
+const Flake = styled.div.attrs({
+  'data-e2e': 'flake',
+})`
   &:before,
   &:after {
     content: '\\2744';

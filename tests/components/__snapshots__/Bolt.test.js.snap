@@ -8,8 +8,8 @@ exports[`<Bolt /> should should render div with theme 1`] = `
   margin: -0.25em 0 0 -0.125em;
   color: grey;
   opacity: 0.3;
-  -webkit-animation: hgpJKF 2s linear infinite;
-  animation: hgpJKF 2s linear infinite;
+  -webkit-animation: iiNwHN 2s linear infinite;
+  animation: iiNwHN 2s linear infinite;
 }
 
 .c0:nth-child(2) {
@@ -20,8 +20,8 @@ exports[`<Bolt /> should should render div with theme 1`] = `
   -ms-transform: translate(2.5em,2.25em);
   transform: translate(2.5em,2.25em);
   opacity: 0.2;
-  -webkit-animation: hgpJKF 1.5s linear infinite;
-  animation: hgpJKF 1.5s linear infinite;
+  -webkit-animation: iiNwHN 1.5s linear infinite;
+  animation: iiNwHN 1.5s linear infinite;
 }
 
 .c0:before,
@@ -70,5 +70,6 @@ exports[`<Bolt /> should should render div with theme 1`] = `
 
 <div
   className="c0"
+  data-e2e="bolt"
 />
 `;

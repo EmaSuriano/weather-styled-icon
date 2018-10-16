@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Icon = styled.div`
+const Icon = styled.div.attrs({
+  'data-e2e': 'icon',
+})`
   position: relative;
   display: inline-block;
   height: 10em;

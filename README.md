@@ -7,7 +7,7 @@
 [![Storybook][storybook-image]][demo-link]
 [![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
 
-Animated and configurable weather icons made in React ⚛️, using styled-components 💅 and CSS3 Animations.
+Animated and configurable weather icons made in React ⚛️, using styled-components 4 💅 and CSS3 Animations.
 
 Check this [Storybook][demo-link] to try them!
 

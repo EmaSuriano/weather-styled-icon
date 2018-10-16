@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { ThemePropType, defaultTheme } from '../constants';
 
-const Rays = styled.div`
+const Rays = styled.div.attrs({
+  'data-e2e': 'rays',
+})`
   position: absolute;
   top: -2em;
   left: 50%;

@@ -1,15 +1,10 @@
 import React from 'react';
 import Drop from '../../src/components/Drop';
-import { shallow } from 'enzyme';
-import 'jest-styled-components';
+import { renderWithTheme } from '../utils';
 
 describe('<Drop />', () => {
-  const theme = {
-    dropsColor: 'blue',
-  };
-
   it('should should render div with theme', () => {
-    const wrapper = shallow(<Drop theme={theme} />);
+    const wrapper = renderWithTheme(<Drop />);
 
     expect(wrapper).toMatchSnapshot();
   });

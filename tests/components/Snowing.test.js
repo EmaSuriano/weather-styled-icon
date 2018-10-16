@@ -1,19 +1,19 @@
 import React from 'react';
 import Snowing from '../../src/components/Snowing';
-import { shallow } from 'enzyme';
+import { mountWithTheme } from '../utils';
 
 describe('<Snowing />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Snowing />);
+    wrapper = mountWithTheme(<Snowing />);
   });
 
   it('should render WeatherContainer', () => {
-    expect(wrapper.find('WeatherContainer').exists()).toBe(true);
+    expect(wrapper.find('[data-e2e="weather-container"]').exists()).toBe(true);
   });
 
   it('should render Flake', () => {
-    expect(wrapper.find('Flake')).toHaveLength(2);
+    expect(wrapper.find('[data-e2e="flake"]')).toHaveLength(2);
   });
 });

@@ -1,36 +1,32 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import { Rain } from '../src';
+import { mountWithTheme } from './utils';
 
 describe('<Rain />', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Rain theme={{ cloudsColor: 'white' }} size={2} />);
-  });
-
   it('should render Icon with size', () => {
-    const icon = wrapper.find('Icon');
+    const wrapper = mountWithTheme(<Rain size={2} />);
+    const icon = wrapper.find('[data-e2e="icon"]');
 
-    expect(icon.exists()).toBe(true);
+    expect(icon).toHaveLength(1);
     expect(icon.prop('size')).toBe(2);
   });
 
   it('should render Cloud with Drops when lighting is false', () => {
-    expect(wrapper.find('Cloud').exists()).toBe(true);
-    expect(wrapper.find('Drops').exists()).toBe(true);
+    const wrapper = mountWithTheme(<Rain />);
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="drop"]')).toHaveLength(1);
   });
 
   it('should render Cloud with Lighting when lighting is true', () => {
-    wrapper.setProps({ lighting: true });
-    expect(wrapper.find('Cloud').exists()).toBe(true);
-    expect(wrapper.find('Lighting').exists()).toBe(true);
+    const wrapper = mountWithTheme(<Rain lighting />);
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="bolt"]')).toHaveLength(2);
   });
 
   it('should render Cloud and Sun when patchy is true', () => {
-    wrapper.setProps({ patchy: true });
+    const wrapper = mountWithTheme(<Rain patchy />);
 
-    expect(wrapper.find('Cloud')).toHaveLength(1);
-    expect(wrapper.find('Sunny')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="sun-phere"]')).toHaveLength(1);
   });
 });
