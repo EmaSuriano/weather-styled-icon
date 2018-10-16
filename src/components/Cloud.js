@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import Pan from './animations/Pan';
 import { ThemePropType, defaultTheme } from '../constants';
 
-const Cloud = styled.div`
+const Cloud = styled.div.attrs({
+  'data-e2e': 'cloud',
+})`
   position: absolute;
   z-index: 1;
   top: 50%;

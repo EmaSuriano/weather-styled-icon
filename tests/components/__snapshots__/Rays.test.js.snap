@@ -10,8 +10,8 @@ exports[`<Rays /> should should render div with theme 1`] = `
   height: 1.125em;
   margin-left: -0.1875em;
   border-radius: 0.25em;
-  background: yellow;
-  box-shadow: 0 5.375em yellow;
+  background: #FFC107;
+  box-shadow: 0 5.375em #FFC107;
 }
 
 .c0:before,
@@ -30,8 +30,8 @@ exports[`<Rays /> should should render div with theme 1`] = `
   -ms-transform-origin: 50% 3.25em;
   transform-origin: 50% 3.25em;
   border-radius: 0.25em;
-  background: yellow;
-  box-shadow: 0 5.375em yellow;
+  background: #FFC107;
+  box-shadow: 0 5.375em #FFC107;
 }
 
 .c0:before {
@@ -42,5 +42,6 @@ exports[`<Rays /> should should render div with theme 1`] = `
 
 <div
   className="c0"
+  data-e2e="rays"
 />
 `;

@@ -10,17 +10,18 @@ exports[`<Drop /> should should render div with theme 1`] = `
   width: 1.125em;
   height: 1.125em;
   margin: -1em 0 0 -0.25em;
-  background: blue;
+  background: #2196F3;
   border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
   box-shadow: 0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2), -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2), -1.375em -0.125em 0 rgba(255,255,255,0.2);
   -webkit-transform: rotate(-28deg);
   -ms-transform: rotate(-28deg);
   transform: rotate(-28deg);
-  -webkit-animation: lnNETy 3s linear infinite;
-  animation: lnNETy 3s linear infinite;
+  -webkit-animation: bvDUoV 3s linear infinite;
+  animation: bvDUoV 3s linear infinite;
 }
 
 <div
   className="c0"
+  data-e2e="drop"
 />
 `;

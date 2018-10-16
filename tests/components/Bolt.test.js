@@ -1,5 +1,4 @@
 import React from 'react';
-import 'jest-styled-components';
 import Bolt from '../../src/components/Bolt';
 import { renderWithTheme } from '../utils';
 

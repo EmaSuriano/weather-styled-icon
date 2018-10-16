@@ -1,11 +1,10 @@
 import React from 'react';
 import Rays from '../../src/components/Rays';
-import { shallow } from 'enzyme';
-import 'jest-styled-components';
+import { renderWithTheme } from '../utils';
 
 describe('<Rays />', () => {
   it('should should render div with theme', () => {
-    const wrapper = shallow(<Rays theme={{ raysColor: 'yellow' }} />);
+    const wrapper = renderWithTheme(<Rays />);
 
     expect(wrapper).toMatchSnapshot();
   });

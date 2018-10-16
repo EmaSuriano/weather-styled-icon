@@ -9,10 +9,11 @@ exports[`<WeatherContainer /> should should render div with theme 1`] = `
   width: 3.75em;
   height: 3.75em;
   margin: 0.375em 0 0 -2em;
-  background: red;
+  background: #FFFFFF;
 }
 
 <div
   className="c0"
+  data-e2e="weather-container"
 />
 `;

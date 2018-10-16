@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { ThemePropType, defaultTheme } from '../constants';
 
-const WeatherContainer = styled.div`
+const WeatherContainer = styled.div.attrs({
+  'data-e2e': 'weather-container',
+})`
   position: absolute;
   z-index: 2;
   top: 50%;

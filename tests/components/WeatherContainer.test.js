@@ -1,13 +1,10 @@
 import React from 'react';
 import WeatherContainer from '../../src/components/WeatherContainer';
-import { shallow } from 'enzyme';
-import 'jest-styled-components';
+import { renderWithTheme } from '../utils';
 
 describe('<WeatherContainer />', () => {
   it('should should render div with theme', () => {
-    const wrapper = shallow(
-      <WeatherContainer theme={{ backgroundColor: 'red' }} />,
-    );
+    const wrapper = renderWithTheme(<WeatherContainer />);
 
     expect(wrapper).toMatchSnapshot();
   });

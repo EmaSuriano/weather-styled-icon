@@ -1,29 +1,27 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import { Snow } from '../src';
+import { mountWithTheme } from './utils';
 
 describe('<Snow />', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Snow theme={{ cloudsColor: 'white' }} size={2} />);
-  });
-
   it('should render Icon with size', () => {
-    const icon = wrapper.find('Icon');
+    const wrapper = mountWithTheme(<Snow size={2} />);
+    const icon = wrapper.find('[data-e2e="icon"]');
 
     expect(icon.exists()).toBe(true);
     expect(icon.prop('size')).toBe(2);
   });
 
   it('should render Cloud with Snowing when lighting is false', () => {
-    expect(wrapper.find('Cloud').exists()).toBe(true);
-    expect(wrapper.find('Snowing').exists()).toBe(true);
+    const wrapper = mountWithTheme(<Snow size={2} />);
+
+    expect(wrapper.find('[data-e2e="cloud"]').exists()).toBe(true);
+    expect(wrapper.find('[data-e2e="flake"]').exists()).toBe(true);
   });
 
   it('should render Cloud and Sun when patchy is true', () => {
-    wrapper.setProps({ patchy: true });
-    expect(wrapper.find('Cloud')).toHaveLength(1);
-    expect(wrapper.find('Sunny')).toHaveLength(1);
+    const wrapper = mountWithTheme(<Snow patchy size={2} />);
+
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="sun-phere"]').exists()).toBe(true);
   });
 });

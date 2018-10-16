@@ -8,7 +8,7 @@ exports[`<Flake /> should should render div with theme 1`] = `
   top: 50%;
   left: 50%;
   margin: -1.5em 0 0 -1.0125em;
-  color: white;
+  color: #2196F3;
   opacity: 0.4;
   -webkit-animation: cZxgpV 8s linear infinite reverse;
   animation: cZxgpV 8s linear infinite reverse;
@@ -40,5 +40,6 @@ exports[`<Flake /> should should render div with theme 1`] = `
 
 <div
   className="c0"
+  data-e2e="flake"
 />
 `;

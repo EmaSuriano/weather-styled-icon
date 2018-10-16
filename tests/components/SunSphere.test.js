@@ -1,16 +1,10 @@
 import React from 'react';
 import SunSphere from '../../src/components/SunSphere';
-import { shallow } from 'enzyme';
-import 'jest-styled-components';
+import { renderWithTheme } from '../utils';
 
 describe('<SunSphere />', () => {
-  const theme = {
-    sunColor: 'red',
-    backgroundColor: 'white',
-  };
-
   it('should render div with theme', () => {
-    const wrapper = shallow(<SunSphere theme={theme} />);
+    const wrapper = renderWithTheme(<SunSphere />);
 
     expect(wrapper).toMatchSnapshot();
   });

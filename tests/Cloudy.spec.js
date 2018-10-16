@@ -1,31 +1,27 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import { Cloudy } from '../src';
+import { mountWithTheme } from './utils';
 
 describe('<Cloudy />', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Cloudy theme={{ cloudsColor: 'white' }} size={2} />);
-  });
   it('should render Icon with size', () => {
-    const icon = wrapper.find('Icon');
+    const wrapper = mountWithTheme(<Cloudy size={2} />);
+    const icon = wrapper.find('[data-e2e="icon"]');
 
     expect(icon.exists()).toBe(true);
     expect(icon.prop('size')).toBe(2);
   });
 
   it('should render 2 Cloud components when patchy is false', () => {
-    const clouds = wrapper.find('Cloud');
-    const sun = wrapper.find('Sun');
+    const wrapper = mountWithTheme(<Cloudy />);
 
-    expect(clouds).toHaveLength(2);
-    expect(sun).toHaveLength(0);
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(2);
+    expect(wrapper.find('[data-e2e="sun-phere"]')).toHaveLength(0);
   });
 
   it('should render Cloud and Sun when patchy is true', () => {
-    wrapper.setProps({ patchy: true });
-    expect(wrapper.find('Cloud')).toHaveLength(1);
-    expect(wrapper.find('Sunny')).toHaveLength(1);
+    const wrapper = mountWithTheme(<Cloudy patchy />);
+
+    expect(wrapper.find('[data-e2e="cloud"]')).toHaveLength(1);
+    expect(wrapper.find('[data-e2e="sun-phere"]')).toHaveLength(1);
   });
 });

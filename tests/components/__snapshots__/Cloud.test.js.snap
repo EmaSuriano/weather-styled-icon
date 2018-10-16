@@ -44,5 +44,6 @@ exports[`<Cloud /> should should render div with theme 1`] = `
 
 <div
   className="c0"
+  data-e2e="cloud"
 />
 `;

@@ -26,7 +26,9 @@ export const DropAnimation = ({ theme }) => keyframes`
 }
 `;
 
-const Drop = styled.div`
+const Drop = styled.div.attrs({
+  'data-e2e': 'drop',
+})`
   &:after {
     content: '';
     position: absolute;

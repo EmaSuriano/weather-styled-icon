@@ -1,8 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> should render WeatherContainer 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  height: 10em;
+  width: 10em;
+  font-size: 1em;
+}
+
 <div
-  className="sc-bdVaJa iXOemQ"
+  className="c0"
+  data-e2e="icon"
   size={1}
 />
 `;
