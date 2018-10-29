@@ -30,7 +30,7 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.3.13",
+    "@storybook/addon-info": "^4.0.0",
     "@storybook/addon-options": "^3.3.13",
     "@storybook/react": "^3.3.13",
     "babel-core": "^6.26.0",
