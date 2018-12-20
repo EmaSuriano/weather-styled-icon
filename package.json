@@ -22,7 +22,7 @@
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "^16.7.0",
     "styled-components": "^4.0.0"
   },
   "peerDependencies": {
