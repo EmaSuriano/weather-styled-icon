@@ -52,7 +52,7 @@
     "path": "^0.12.7",
     "raf": "^3.4.0",
     "react": "^16.7.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.7.0"
   },
   "jest": {
     "setupFiles": [
