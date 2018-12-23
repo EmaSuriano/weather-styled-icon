@@ -22,7 +22,7 @@
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "^16.7.0",
     "styled-components": "^4.0.0"
   },
   "peerDependencies": {
@@ -51,8 +51,8 @@
     "nwb": "~0.22.0",
     "path": "^0.12.7",
     "raf": "^3.4.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "jest": {
     "setupFiles": [
