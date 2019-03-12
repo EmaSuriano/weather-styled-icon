@@ -10,8 +10,4 @@ const theme = {
 
 createWeatherStory('Sunny', theme)
   .add('Default', () => <Sunny />)
-  .add('Different sizes', () => [
-    <Sunny size="0.5" />,
-    <Sunny />,
-    <Sunny size="1.5" />,
-  ]);
+  .add('Different sizes', () => [<Sunny size="0.5" />, <Sunny />, <Sunny size="1.5" />]);

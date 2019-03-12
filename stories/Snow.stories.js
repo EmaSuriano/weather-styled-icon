@@ -12,9 +12,5 @@ const theme = {
 
 createWeatherStory('Snow', theme)
   .add('Default', () => <Snow />)
-  .add('Different sizes', () => [
-    <Snow size="0.5" />,
-    <Snow />,
-    <Snow size="1.5" />,
-  ])
+  .add('Different sizes', () => [<Snow size="0.5" />, <Snow />, <Snow size="1.5" />])
   .add('Patchy', () => <Snow patchy />);

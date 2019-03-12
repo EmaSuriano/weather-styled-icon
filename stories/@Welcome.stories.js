@@ -6,15 +6,14 @@ import { Sunny, Rain, Snow, Cloudy } from '../src';
 const WelcomeContainer = styled.div`
   margin: 15px;
   line-height: 1.4;
-  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans,
-    sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 `;
 
-const WelcomeStoryBook = () => (
+storiesOf('@Welcome', module).add('to Weather Styled Icon', () => (
   <WelcomeContainer>
     <div>
       <Sunny />
@@ -42,8 +41,4 @@ const WelcomeStoryBook = () => (
 
     <p>Please navigate between them and check all the variations</p>
   </WelcomeContainer>
-);
-
-storiesOf('@Welcome', module).add('to Weather Styled Icon', () => (
-  <WelcomeStoryBook />
 ));

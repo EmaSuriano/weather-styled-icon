@@ -13,11 +13,7 @@ const theme = {
 
 createWeatherStory('Rain', theme)
   .add('Default', () => <Rain />)
-  .add('Different sizes', () => [
-    <Rain size="0.5" />,
-    <Rain />,
-    <Rain size="1.5" />,
-  ])
+  .add('Different sizes', () => [<Rain size="0.5" />, <Rain />, <Rain size="1.5" />])
   .add('Patchy', () => <Rain patchy />)
   .add('Lighting', () => <Rain lighting />)
   .add('Lighting patchy', () => <Rain lighting patchy />);
