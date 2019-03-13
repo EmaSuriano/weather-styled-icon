@@ -1,6 +1,6 @@
 workflow "Deploy" {
   on = "push"
-  resolves = ["Deploy to GitHub Pages"]
+  resolves = ["bitoiu/release-notify-action@master"]
 }
 
 action "Deploy to GitHub Pages" {
@@ -11,4 +11,10 @@ action "Deploy to GitHub Pages" {
     BRANCH = "gh-pages"
     FOLDER = "storybook-static"
   }
+}
+
+action "bitoiu/release-notify-action@master" {
+  uses = "bitoiu/release-notify-action@master"
+  needs = ["Deploy to GitHub Pages"]
+  secrets = ["SENDGRID_API_TOKEN", "RECIPIENTS"]
 }
