@@ -18,7 +18,8 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**",
     "storybook": "start-storybook -p 6006",
-    "publish": "npm run build && npm publish"
+    "publish": "npm run build && npm publish",
+    "storybook-build": "build-storybook"
   },
   "dependencies": {
     "styled-components": "^4.0.0"
