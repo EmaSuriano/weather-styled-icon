@@ -1,7 +1,7 @@
 workflow "Deploy" {
   on = "push"
   resolves = [
-    "bitoiu/release-notify-action@master",
+    "Deploy to GitHub Pages",
   ]
 }
 
@@ -13,12 +13,4 @@ action "Deploy to GitHub Pages" {
     BUILD_SCRIPT = "yarn && yarn storybook-build"
   }
   secrets = ["ACCESS_TOKEN"]
-}
-
-action "bitoiu/release-notify-action@master" {
-  uses = "bitoiu/release-notify-action@master"
-  needs = [
-    "Deploy to GitHub Pages",
-  ]
-  secrets = ["SENDGRID_API_TOKEN", "RECIPIENTS"]
 }
