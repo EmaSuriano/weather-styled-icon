@@ -1,6 +1,9 @@
 workflow "Deploy" {
   on = "push"
-  resolves = ["bitoiu/release-notify-action@master"]
+  resolves = [
+    "bitoiu/release-notify-action@master",
+    "Publish NPM",
+  ]
 }
 
 action "Deploy to GitHub Pages" {
@@ -15,6 +18,15 @@ action "Deploy to GitHub Pages" {
 
 action "bitoiu/release-notify-action@master" {
   uses = "bitoiu/release-notify-action@master"
-  needs = ["Deploy to GitHub Pages"]
+  needs = [
+    "Deploy to GitHub Pages",
+    "Publish NPM",
+  ]
   secrets = ["SENDGRID_API_TOKEN", "RECIPIENTS"]
+}
+
+action "Publish NPM" {
+  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  args = "publish"
+  secrets = ["NPM_AUTH_TOKEN"]
 }
