@@ -1,6 +1,6 @@
 {
   "name": "weather-styled-icon",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -18,9 +18,7 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**",
     "storybook": "start-storybook -p 6006",
-    "publish": "npm run build && npm publish",
-    "asdasd": "yarn && build-storybook",
-    "deploy": "build-storybook && gh-pages -d storybook-static"
+    "publish": "npm run build && npm publish"
   },
   "dependencies": {
     "styled-components": "^4.0.0"
