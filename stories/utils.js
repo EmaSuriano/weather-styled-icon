@@ -12,7 +12,9 @@ const CenteredContainer = styled.div`
   align-items: center;
 `;
 
-export const centeredDecorator = story => <CenteredContainer>{story()}</CenteredContainer>;
+export const centeredDecorator = story => (
+  <CenteredContainer>{story()}</CenteredContainer>
+);
 
 const BackgroundContainer = styled.div`
   background-color: ${props => props.color};
@@ -37,7 +39,9 @@ export const createWeatherStory = (weather, theme) => {
 
   const story = createStory(weather);
 
-  const storyWithTheme = createStory(`${weather}/WithTheme`).addDecorator(themeDecorator(theme));
+  const storyWithTheme = createStory(`${weather}/themed`).addDecorator(
+    themeDecorator(theme),
+  );
 
   function add(...args) {
     story.add(...args);
