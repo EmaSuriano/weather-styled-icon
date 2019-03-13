@@ -11,9 +11,5 @@ const theme = {
 
 createWeatherStory('Cloudy', theme)
   .add('Default', () => <Cloudy />)
-  .add('Different sizes', () => [
-    <Cloudy size="0.5" />,
-    <Cloudy />,
-    <Cloudy size="1.5" />,
-  ])
+  .add('Different sizes', () => [<Cloudy size="0.5" />, <Cloudy />, <Cloudy size="1.5" />])
   .add('Patchy', () => <Cloudy patchy />);

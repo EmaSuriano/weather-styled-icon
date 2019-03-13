@@ -22,7 +22,6 @@
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
-    "react-test-renderer": "^16.7.0",
     "styled-components": "^4.0.0"
   },
   "peerDependencies": {
@@ -30,9 +29,10 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^4.0.0",
-    "@storybook/addon-options": "^4.0.0",
-    "@storybook/react": "^4.0.0",
+    "react-test-renderer": "^16.7.0",
+    "@storybook/addon-info": "^5.0.1",
+    "@storybook/addon-options": "^5.0.1",
+    "@storybook/react": "^5.0.1",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.0.0",
     "babel-preset-es2015": "^6.24.1",

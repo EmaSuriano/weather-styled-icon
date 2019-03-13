@@ -39,7 +39,7 @@ export const createWeatherStory = (weather, theme) => {
 
   const story = createStory(weather);
 
-  const storyWithTheme = createStory(`${weather}/withTheme`).addDecorator(
+  const storyWithTheme = createStory(`${weather}/themed`).addDecorator(
     themeDecorator(theme),
   );
 
