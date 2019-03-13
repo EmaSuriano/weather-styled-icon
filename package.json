@@ -19,6 +19,7 @@
     "lint": "eslint src/**",
     "storybook": "start-storybook -p 6006",
     "publish": "npm run build && npm publish",
+    "asdasd": "yarn && build-storybook",
     "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
