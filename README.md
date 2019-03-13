@@ -3,7 +3,6 @@
 [![Greenkeeper badge][greenkeeper-image]](https://greenkeeper.io/)
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Coveralls][coverrals-image]][coverrals-url]
 [![Storybook][storybook-image]][demo-link]
 [![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
 
@@ -23,7 +22,7 @@ npm install weather-styled-icon
 
 ## Usage example
 
-The library exports in total 4 icons, each one can be configurable by props:
+The library exports in total 4 weather icons, all of them share the prop of `size` which allows you to increase or decrease the space the icon will take. The available weather are:
 
 - [Sunny](#sunny)
 - [Cloudy](#cloudy)
@@ -33,23 +32,19 @@ The library exports in total 4 icons, each one can be configurable by props:
 ### Sunny
 
 ```javascript
-<Sunny size={1} />
+<Sunny />
 ```
 
 ### Cloudy
 
 ```javascript
-<Cloudy
-  size={1}
-  patchy // Show the sun at a side of the cloud
-/>
+<Cloudy patchy />
 ```
 
 ### Rain
 
 ```javascript
 <Rain
-  size={1}
   patchy // Show the sun at a side of the cloud
   lighting // Show rays instead of drops falling of the cloud
 />
@@ -59,7 +54,6 @@ The library exports in total 4 icons, each one can be configurable by props:
 
 ```javascript
 <Snow
-  size={1}
   patchy // Show the sun at a side of the cloud
 />
 ```
@@ -119,8 +113,5 @@ MIT.
 [npm-url]: https://www.npmjs.com/package/weather-styled-icon
 [travis-image]: https://travis-ci.org/EmaSuriano/weather-styled-icon.svg?branch=master
 [travis-url]: https://travis-ci.org/EmaSuriano/weather-styled-icon
-[wiki]: https://github.com/yourname/yourproject/wiki
 [storybook-image]: https://img.shields.io/badge/%F0%9F%93%93-Storybook-ff69b4.svg
 [demo-link]: https://emasuriano.github.io/weather-styled-icon/?selectedKind=%40Welcome
-[coverrals-image]: https://coveralls.io/repos/github/EmaSuriano/weather-styled-icon/badge.svg?branch=master
-[coverrals-url]: https://coveralls.io/github/EmaSuriano/weather-styled-icon
