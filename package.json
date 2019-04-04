@@ -1,6 +1,6 @@
 {
   "name": "weather-styled-icon",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "weather-styled-icon React component",
   "main": "lib/index.js",
   "module": "es/index.js",
