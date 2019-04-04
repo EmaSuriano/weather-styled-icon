@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { storiesOf } from '@storybook/react';
 import { WeatherThemeProvider } from '../src';
-import { withInfo } from '@storybook/addon-info';
+import { ThemePropType } from '../src/constants';
 
-const CenteredContainer = styled.div`
+export const CenterContainer = styled.div`
+  ${props =>
+    props.theme.backgroundColor &&
+    `background-color: ${props.theme.backgroundColor}`};
   text-align: center;
   height: 100vh;
   display: flex;
@@ -12,44 +15,21 @@ const CenteredContainer = styled.div`
   align-items: center;
 `;
 
-export const centeredDecorator = story => (
-  <CenteredContainer>{story()}</CenteredContainer>
-);
-
-const BackgroundContainer = styled.div`
+const BackgroundContainer = styled(CenterContainer)`
   background-color: ${props => props.color};
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
-export const themeDecorator = theme => story => (
-  <BackgroundContainer color={theme.backgroundColor}>
-    <WeatherThemeProvider theme={theme}>{story()}</WeatherThemeProvider>
-  </BackgroundContainer>
+export const ThemeContainer = ({ theme, children }) => (
+  <WeatherThemeProvider theme={theme}>
+    <BackgroundContainer>{children}</BackgroundContainer>
+  </WeatherThemeProvider>
 );
 
-export const createWeatherStory = (weather, theme) => {
-  const createStory = name =>
-    storiesOf(name, module)
-      .addDecorator((story, context) => withInfo(name)(story)(context))
-      .addDecorator(centeredDecorator);
+ThemeContainer.propTypes = {
+  theme: ThemePropType.isRequired,
+  children: PropTypes.node,
+};
 
-  const story = createStory(weather);
-
-  const storyWithTheme = createStory(`${weather}/themed`).addDecorator(
-    themeDecorator(theme),
-  );
-
-  function add(...args) {
-    story.add(...args);
-    storyWithTheme.add(...args);
-    return { add };
-  }
-
-  return {
-    add,
-  };
+ThemeContainer.defaultProps = {
+  children: PropTypes.node.isRequired,
 };
