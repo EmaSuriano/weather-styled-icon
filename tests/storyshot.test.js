@@ -2,13 +2,11 @@ import initStoryshots from '@storybook/addon-storyshots';
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
 
 const beforeScreenshot = async page => {
-  await page.evaluate(() => {
-    const animationList = document.querySelectorAll('[data-animation]');
-
-    animationList.forEach(x => {
-      x.style.animation = 'stop';
-    });
-  });
+  await page.evaluate(() =>
+    document
+      .querySelectorAll('[data-animation="true"]')
+      .forEach(({ style }) => (style.animation = 'stop')),
+  );
 };
 
 initStoryshots({
