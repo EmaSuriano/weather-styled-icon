@@ -4,6 +4,7 @@ import Spin from './animations/Spin';
 
 const SunSphere = styled.div.attrs({
   'data-e2e': 'sun-phere',
+  'data-animation': true,
 })`
   position: absolute;
   top: 50%;

@@ -4,6 +4,7 @@ import { ThemePropType, defaultTheme } from '../constants';
 
 const Flake = styled.div.attrs({
   'data-e2e': 'flake',
+  'data-animation': true,
 })`
   &:before,
   &:after {

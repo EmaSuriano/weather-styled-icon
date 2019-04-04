@@ -28,6 +28,7 @@ export const DropAnimation = ({ theme }) => keyframes`
 
 const Drop = styled.div.attrs({
   'data-e2e': 'drop',
+  'data-animation': true,
 })`
   &:after {
     content: '';
