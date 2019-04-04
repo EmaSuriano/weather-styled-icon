@@ -1,6 +1,7 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { Snow } from '../src';
-import { createWeatherStory } from './utils';
+import { CenterContainer, ThemeContainer } from './utils';
 
 const theme = {
   cloudsColor: 'RoyalBlue ',
@@ -10,7 +11,16 @@ const theme = {
   raysColor: 'RebeccaPurple',
 };
 
-createWeatherStory('Snow', theme)
-  .add('Default', () => <Snow />)
-  .add('Different sizes', () => [<Snow size="0.5" />, <Snow />, <Snow size="1.5" />])
-  .add('Patchy', () => <Snow patchy />);
+storiesOf('Snow', theme)
+  .add('Variations', () => (
+    <CenterContainer>
+      <Snow />
+      <Snow patchy />
+    </CenterContainer>
+  ))
+  .add('Theming', () => (
+    <ThemeContainer theme={theme}>
+      <Snow />
+      <Snow patchy />
+    </ThemeContainer>
+  ));

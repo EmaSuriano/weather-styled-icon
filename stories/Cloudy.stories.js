@@ -1,6 +1,7 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { Cloudy } from '../src';
-import { createWeatherStory } from './utils';
+import { CenterContainer, ThemeContainer } from './utils';
 
 const theme = {
   cloudsColor: 'greenYellow',
@@ -9,7 +10,16 @@ const theme = {
   raysColor: 'OrangeRed',
 };
 
-createWeatherStory('Cloudy', theme)
-  .add('Default', () => <Cloudy />)
-  .add('Different sizes', () => [<Cloudy size="0.5" />, <Cloudy />, <Cloudy size="1.5" />])
-  .add('Patchy', () => <Cloudy patchy />);
+storiesOf('Cloudy', module)
+  .add('Variations', () => (
+    <CenterContainer>
+      <Cloudy />
+      <Cloudy patchy />
+    </CenterContainer>
+  ))
+  .add('Theming', () => (
+    <ThemeContainer theme={theme}>
+      <Cloudy />
+      <Cloudy patchy />
+    </ThemeContainer>
+  ));
