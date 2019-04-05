@@ -12,7 +12,7 @@ const theme = {
   raysColor: 'OrangeRed',
 };
 
-storiesOf('Rain', theme)
+storiesOf('Rain', module)
   .add('Variations', () => (
     <CenterContainer>
       <Rain />

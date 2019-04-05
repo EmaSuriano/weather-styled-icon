@@ -11,11 +11,10 @@ const theme = {
   raysColor: 'RebeccaPurple',
 };
 
-storiesOf('Snow', theme)
+storiesOf('Snow', module)
   .add('Variations', () => (
     <CenterContainer>
       <Snow />
-      <Snow patchy />
     </CenterContainer>
   ))
   .add('Theming', () => (

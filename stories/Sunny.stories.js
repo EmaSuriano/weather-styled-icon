@@ -9,7 +9,7 @@ const theme = {
   backgroundColor: 'peachPuff',
 };
 
-storiesOf('Sunny', theme)
+storiesOf('Sunny', module)
   .add('Variations', () => (
     <CenterContainer>
       <Sunny />
