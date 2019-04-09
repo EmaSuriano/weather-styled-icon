@@ -9,10 +9,16 @@ const beforeScreenshot = async page => {
   );
 };
 
+const getMatchOptions = () => ({
+  failureThreshold: 0.2,
+  failureThresholdType: 'percent',
+});
+
 initStoryshots({
   suite: 'Image storyshots',
   test: imageSnapshot({
     storybookUrl: 'http://localhost:6006/',
     beforeScreenshot,
+    getMatchOptions,
   }),
 });
