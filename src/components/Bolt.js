@@ -21,6 +21,7 @@ const BoltAnimation = ({ theme }) => keyframes`
 
 const Bolt = styled.div.attrs({
   'data-e2e': 'bolt',
+  'data-animation': true,
 })`
   position: absolute;
   top: 50%;

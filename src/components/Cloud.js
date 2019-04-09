@@ -4,6 +4,7 @@ import { ThemePropType, defaultTheme } from '../constants';
 
 const Cloud = styled.div.attrs({
   'data-e2e': 'cloud',
+  'data-animation': true,
 })`
   position: absolute;
   z-index: 1;

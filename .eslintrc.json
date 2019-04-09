@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
   "rules": {
     "react/jsx-filename-extension": "off",
     "function-paren-newline": "off",

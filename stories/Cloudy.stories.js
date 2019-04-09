@@ -17,6 +17,13 @@ storiesOf('Cloudy', module)
       <Cloudy patchy />
     </CenterContainer>
   ))
+  .add('Different Sizes', () => (
+    <CenterContainer>
+      <Cloudy size={0.7} />
+      <Cloudy />
+      <Cloudy size={1.3} />
+    </CenterContainer>
+  ))
   .add('Theming', () => (
     <ThemeContainer theme={theme}>
       <Cloudy />

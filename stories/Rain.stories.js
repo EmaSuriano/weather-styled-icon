@@ -12,13 +12,20 @@ const theme = {
   raysColor: 'OrangeRed',
 };
 
-storiesOf('Rain', theme)
+storiesOf('Rain', module)
   .add('Variations', () => (
     <CenterContainer>
       <Rain />
       <Rain patchy />
       <Rain lighting />
       <Rain lighting patchy />
+    </CenterContainer>
+  ))
+  .add('Different Sizes', () => (
+    <CenterContainer>
+      <Rain size={0.7} />
+      <Rain />
+      <Rain size={1.3} />
     </CenterContainer>
   ))
   .add('Theming', () => (

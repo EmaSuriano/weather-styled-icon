@@ -1,12 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import WeatherContainer from './WeatherContainer';
-import Flake from './Flake';
+import Flakes from './Flakes';
+
+const SnowingContainer = styled(WeatherContainer)`
+  display: flex;
+  justify-content: space-around;
+`;
 
 const Snowing = () => (
-  <WeatherContainer>
-    <Flake />
-    <Flake />
-  </WeatherContainer>
+  <SnowingContainer>
+    <Flakes />
+    <Flakes />
+  </SnowingContainer>
 );
 
 export default Snowing;
