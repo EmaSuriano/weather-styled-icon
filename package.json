@@ -22,7 +22,6 @@
     "storybook-build": "build-storybook"
   },
   "dependencies": {
-    "react-hot-loader": "^4.8.2",
     "styled-components": "^4.2.0"
   },
   "peerDependencies": {
@@ -33,6 +32,7 @@
     "@storybook/addon-storyshots": "^5.0.6",
     "@storybook/addon-storyshots-puppeteer": "^5.0.6",
     "@storybook/react": "^5.0.6",
+    "react-hot-loader": "^4.8.2",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.0.0",
     "babel-loader": "^8.0.5",
