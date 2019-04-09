@@ -12,7 +12,7 @@ Check this [Storybook][demo-link] to try them!
 
 Icons and styles were taken from this [Codepen](https://codepen.io/joshbader/pen/EjXgqr?q=weather&limit=all&type=type-pens), please leave him a start 🌟
 
-![Weather styled Icon](docs/weather-styled-icon.gif)
+![Weather styled Icon](https://user-images.githubusercontent.com/3399429/55830109-8f1a9880-5b10-11e9-8efb-9fad5d2a2a92.gif)
 
 ## Installation
 
