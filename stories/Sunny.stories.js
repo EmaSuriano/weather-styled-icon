@@ -15,6 +15,13 @@ storiesOf('Sunny', module)
       <Sunny />
     </CenterContainer>
   ))
+  .add('Different Sizes', () => (
+    <CenterContainer>
+      <Sunny size={0.7} />
+      <Sunny />
+      <Sunny size={1.3} />
+    </CenterContainer>
+  ))
   .add('Theming', () => (
     <ThemeContainer theme={theme}>
       <Sunny />

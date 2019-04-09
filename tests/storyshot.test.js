@@ -3,9 +3,9 @@ import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
 
 const beforeScreenshot = async page => {
   await page.evaluate(() =>
-    document
-      .querySelectorAll('[data-animation="true"]')
-      .forEach(({ style }) => (style.animation = 'stop')),
+    document.querySelectorAll('[data-animation]').forEach(({ style }) => {
+      style.animation = 'stop'; // eslint-disable-line no-param-reassign
+    }),
   );
 };
 

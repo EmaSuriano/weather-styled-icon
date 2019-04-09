@@ -21,6 +21,13 @@ storiesOf('Rain', module)
       <Rain lighting patchy />
     </CenterContainer>
   ))
+  .add('Different Sizes', () => (
+    <CenterContainer>
+      <Rain size={0.7} />
+      <Rain />
+      <Rain size={1.3} />
+    </CenterContainer>
+  ))
   .add('Theming', () => (
     <ThemeContainer theme={theme}>
       <Rain />
