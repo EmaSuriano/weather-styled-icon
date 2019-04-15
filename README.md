@@ -17,45 +17,23 @@ Icons and styles were taken from this [Codepen](https://codepen.io/joshbader/pen
 ## Installation
 
 ```sh
-npm install weather-styled-icon
+yarn add styled-components weather-styled-icon
 ```
 
 ## Usage example
 
-The library exports in total 4 weather icons, all of them share the prop of `size` which allows you to increase or decrease the space the icon will take. The available weather are:
-
-- [Sunny](#sunny)
-- [Cloudy](#cloudy)
-- [Rain](#rain)
-- [Snow](#snow)
-
-### Sunny
-
 ```javascript
-<Sunny />
-```
+import React from 'react';
+import { Sunny, Cloudy, Rain, Snow } from 'weather-styled-icon';
 
-### Cloudy
-
-```javascript
-<Cloudy patchy />
-```
-
-### Rain
-
-```javascript
-<Rain
-  patchy // Show the sun at a side of the cloud
-  lighting // Show rays instead of drops falling of the cloud
-/>
-```
-
-### Snow
-
-```javascript
-<Snow
-  patchy // Show the sun at a side of the cloud
-/>
+const App = () => (
+  <div>
+    <Sunny />
+    <Cloudy />
+    <Rain />
+    <Snow />
+  </div>
+);
 ```
 
 _For more examples and usage, please refer to the [Storybook][demo-link]._
@@ -65,18 +43,10 @@ _For more examples and usage, please refer to the [Storybook][demo-link]._
 All the icons of the library are easy to style. Just by rendering `WeatherThemeProvider` before the use of the icons, they will pick the pallete from the theme.
 
 ```javascript
-import {
-  WeatherThemeProvider,
-  Sunny,
-  Rain,
-  Snow,
-  Cloudy,
-} from 'weather-styled-icons';
+import React from 'react';
+import { WeatherThemeProvider, Sunny } from 'weather-styled-icons';
 
 const theme = {
-  cloudsColor: 'MidnightBlue',
-  dropsColor: 'white',
-  boltColor: 'lightBlue',
   backgroundColor: 'Lavender',
   sunColor: 'Orange',
   raysColor: 'OrangeRed',
@@ -85,14 +55,9 @@ const theme = {
 const App = () => (
   <WeatherThemeProvider theme={theme}>
     <Sunny />
-    <Cloudy />
-    <Rain />
-    <Snowy />
   </WeatherThemeProvider>
 );
 ```
-
-[![Edit weather-styled-icon-theming](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xlklnkoq4q)
 
 ## Licence
 
