@@ -40,7 +40,7 @@
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
