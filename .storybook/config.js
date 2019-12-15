@@ -1,13 +1,5 @@
 import { configure } from '@storybook/react';
 
-// function requireAll(requireContext) {
-//   return requireContext.keys().map(requireContext);
-// }
-
-// function loadStories() {
-//   requireAll(require.context('../stories', true, /.stories.js$/));
-// }
-
 const loadStories = () => {
   require('../stories/Cloudy.stories.js');
   require('../stories/Rain.stories.js');
@@ -16,5 +8,3 @@ const loadStories = () => {
 };
 
 configure(loadStories, module);
-
-// configure(loadStories, module);
