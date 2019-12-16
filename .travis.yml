@@ -6,8 +6,6 @@ cache:
     - node_modules
 
 language: node_js
-node_js:
-  - 10
 
 jobs:
   include:
@@ -22,7 +20,3 @@ jobs:
           skip_cleanup: true
           script:
             - npx semantic-release
-
-branches:
-  only:
-    - master
