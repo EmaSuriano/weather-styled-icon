@@ -1,5 +1,3 @@
-sudo: false
-
 notifications:
   email: false
 
@@ -11,12 +9,20 @@ language: node_js
 node_js:
   - 10
 
-script:
-  - yarn test:ci
-  - yarn lint
-  - yarn build
+jobs:
+  include:
+    - stage: test
+      script: yarn test:ci
+      script: yarn lint
+      script: yarn build
+    - stage: release
+        node_js: lts/*
+        deploy:
+          provider: script
+          skip_cleanup: true
+          script:
+            - npx semantic-release
 
 branches:
   only:
     - master
-    - /^greenkeeper/.*$/
