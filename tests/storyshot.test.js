@@ -1,5 +1,6 @@
 import initStoryshots from '@storybook/addon-storyshots';
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
+import 'babel-polyfill';
 
 const beforeScreenshot = async page => {
   await page.evaluate(() =>
