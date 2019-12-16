@@ -1,6 +1,5 @@
 # weather-styled-icon
 
-[![Greenkeeper badge][greenkeeper-image]](https://greenkeeper.io/)
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Storybook][storybook-image]][demo-link]
