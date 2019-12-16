@@ -1,22 +1,19 @@
-sudo: false
-
 notifications:
   email: false
 
-cache:
-  directories:
-    - node_modules
+cache: npm
 
 language: node_js
 node_js:
-  - 10
+  - 'node'
 
 script:
   - yarn test:ci
   - yarn lint
   - yarn build
 
-branches:
-  only:
-    - master
-    - /^greenkeeper/.*$/
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx semantic-release
