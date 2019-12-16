@@ -1,22 +1,17 @@
 notifications:
   email: false
 
-cache:
-  directories:
-    - node_modules
+cache: npm
 
 language: node_js
 
-jobs:
-  include:
-    - stage: test
-      script: yarn test:ci
-      script: yarn lint
-      script: yarn build
-    - stage: release
-        node_js: lts/*
-        deploy:
-          provider: script
-          skip_cleanup: true
-          script:
-            - npx semantic-release
+script:
+  - yarn test:ci
+  - yarn lint
+  - yarn build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx semantic-release
