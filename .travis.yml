@@ -4,6 +4,7 @@ notifications:
 cache: npm
 
 language: node_js
+node_js: 10
 
 script:
   - yarn test:ci
