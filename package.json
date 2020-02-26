@@ -38,7 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "gh-pages": "^2.0.0",
-    "jest": "^24.8.0",
+    "jest": "^25.1.0",
     "nwb": "~0.23.0",
     "path": "^0.12.7",
     "raf": "^3.4.0",
