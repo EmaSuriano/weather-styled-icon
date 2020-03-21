@@ -48,7 +48,7 @@
     "react-test-renderer": "^16.8.6",
     "semantic-release": "^15.13.31",
     "start-server-and-test": "^1.7.13",
-    "styled-components": "^4.2.0"
+    "styled-components": "^5.0.1"
   },
   "jest": {
     "setupFiles": [
