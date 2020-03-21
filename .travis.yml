@@ -5,7 +5,7 @@ cache: npm
 
 language: node_js
 node_js:
-  - 'node'
+  - '12'
 
 script:
   - yarn test:ci
