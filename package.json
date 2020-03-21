@@ -15,9 +15,9 @@
     "clean": "nwb clean-module && nwb clean-demo",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "start-server-and-test storybook http://localhost:6006 test",
+    "test:ci": "start-server-and-test 6006",
     "lint": "eslint src/**",
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "storybook-build": "build-storybook"
   },
   "peerDependencies": {
