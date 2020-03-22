@@ -8,9 +8,9 @@ node_js:
   - '12'
 
 script:
-  - yarn test:ci
   - yarn lint
   - yarn build
+  - yarn test:ci
 
 deploy:
   provider: script
