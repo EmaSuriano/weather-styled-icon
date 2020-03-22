@@ -1,16 +1,16 @@
 notifications:
   email: false
 
-cache: npm
+cache: yarn
 
 language: node_js
 node_js:
-  - 'node'
+  - '12'
 
 script:
-  - yarn test:ci
   - yarn lint
   - yarn build
+  - yarn test:ci
 
 deploy:
   provider: script
