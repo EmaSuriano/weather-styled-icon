@@ -18,6 +18,7 @@
     "test:ci": "start-server-and-test 6006",
     "lint": "eslint src/**",
     "start": "start-storybook -p 6006",
+    "docs": "yarn start --docs",
     "storybook-build": "build-storybook"
   },
   "peerDependencies": {
@@ -25,9 +26,10 @@
     "styled-components": "5.x"
   },
   "devDependencies": {
-    "@storybook/addon-storyshots": "^5.0.6",
-    "@storybook/addon-storyshots-puppeteer": "^5.0.6",
-    "@storybook/react": "^5.0.6",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-storyshots": "^5.3.18",
+    "@storybook/addon-storyshots-puppeteer": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-require-context-hook": "^1.0.0",

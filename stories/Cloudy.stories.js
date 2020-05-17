@@ -1,32 +1,38 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Cloudy } from '../src';
-import { CenterContainer, ThemeContainer } from './utils';
+import { Cloudy, WeatherThemeProvider } from '../src';
+import Center from './helpers/Center';
 
-const theme = {
-  cloudsColor: 'greenYellow',
-  backgroundColor: 'honeyDew',
-  sunColor: 'Orange',
-  raysColor: 'OrangeRed',
+export default {
+  title: 'Cloudy',
+  component: Cloudy,
+  decorators: [storyFn => <Center>{storyFn()}</Center>],
 };
 
-storiesOf('Cloudy', module)
-  .add('Variations', () => (
-    <CenterContainer>
-      <Cloudy />
-      <Cloudy patchy />
-    </CenterContainer>
-  ))
-  .add('Different Sizes', () => (
-    <CenterContainer>
-      <Cloudy size={0.7} />
-      <Cloudy />
-      <Cloudy size={1.3} />
-    </CenterContainer>
-  ))
-  .add('Theming', () => (
-    <ThemeContainer theme={theme}>
-      <Cloudy />
-      <Cloudy patchy />
-    </ThemeContainer>
-  ));
+export const Variations = () => (
+  <>
+    <Cloudy />
+    <Cloudy patchy />
+  </>
+);
+
+export const DifferentSizes = () => (
+  <>
+    <Cloudy size={0.7} />
+    <Cloudy />
+    <Cloudy size={1.3} />
+  </>
+);
+
+export const Theming = () => {
+  const theme = {
+    cloudsColor: 'greenYellow',
+    sunColor: 'Orange',
+    raysColor: 'OrangeRed',
+  };
+
+  return (
+    <WeatherThemeProvider theme={theme}>
+      <Variations />
+    </WeatherThemeProvider>
+  );
+};
