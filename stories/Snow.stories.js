@@ -1,33 +1,39 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Snow } from '../src';
-import { CenterContainer, ThemeContainer } from './utils';
+import { Snow, WeatherThemeProvider } from '../src';
+import Center from './helpers/Center';
 
-const theme = {
-  cloudsColor: 'RoyalBlue ',
-  snowColor: 'SeaGreen ',
-  backgroundColor: 'PaleGoldenRod',
-  sunColor: 'Purple',
-  raysColor: 'RebeccaPurple',
+export default {
+  title: 'Snow',
+  component: Snow,
+  decorators: [storyFn => <Center>{storyFn()}</Center>],
 };
 
-storiesOf('Snow', module)
-  .add('Variations', () => (
-    <CenterContainer>
-      <Snow />
-      <Snow patchy />
-    </CenterContainer>
-  ))
-  .add('Different Sizes', () => (
-    <CenterContainer>
-      <Snow size={0.7} />
-      <Snow />
-      <Snow size={1.3} />
-    </CenterContainer>
-  ))
-  .add('Theming', () => (
-    <ThemeContainer theme={theme}>
-      <Snow />
-      <Snow patchy />
-    </ThemeContainer>
-  ));
+export const Variations = () => (
+  <>
+    <Snow />
+    <Snow patchy />
+  </>
+);
+
+export const DifferentSizes = () => (
+  <>
+    <Snow size={0.7} />
+    <Snow />
+    <Snow size={1.3} />
+  </>
+);
+
+export const Theming = () => {
+  const theme = {
+    cloudsColor: 'RoyalBlue ',
+    snowColor: 'SeaGreen ',
+    sunColor: 'Purple',
+    raysColor: 'RebeccaPurple',
+  };
+
+  return (
+    <WeatherThemeProvider theme={theme}>
+      <Variations />
+    </WeatherThemeProvider>
+  );
+};

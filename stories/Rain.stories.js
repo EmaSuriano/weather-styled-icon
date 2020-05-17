@@ -1,38 +1,42 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Rain } from '../src';
-import { CenterContainer, ThemeContainer } from './utils';
+import { Rain, WeatherThemeProvider } from '../src';
+import Center from './helpers/Center';
 
-const theme = {
-  cloudsColor: 'MidnightBlue',
-  dropsColor: 'white',
-  boltColor: 'lightBlue',
-  backgroundColor: 'Lavender',
-  sunColor: 'Orange',
-  raysColor: 'OrangeRed',
+export default {
+  title: 'Rain',
+  component: Rain,
+  decorators: [storyFn => <Center>{storyFn()}</Center>],
 };
 
-storiesOf('Rain', module)
-  .add('Variations', () => (
-    <CenterContainer>
-      <Rain />
-      <Rain patchy />
-      <Rain lighting />
-      <Rain lighting patchy />
-    </CenterContainer>
-  ))
-  .add('Different Sizes', () => (
-    <CenterContainer>
-      <Rain size={0.7} />
-      <Rain />
-      <Rain size={1.3} />
-    </CenterContainer>
-  ))
-  .add('Theming', () => (
-    <ThemeContainer theme={theme}>
-      <Rain />
-      <Rain patchy />
-      <Rain lighting />
-      <Rain lighting patchy />
-    </ThemeContainer>
-  ));
+export const Variations = () => (
+  <>
+    <Rain />
+    <Rain patchy />
+    <Rain lighting />
+    <Rain lighting patchy />
+  </>
+);
+
+export const DifferentSizes = () => (
+  <>
+    <Rain size={0.7} />
+    <Rain />
+    <Rain size={1.3} />
+  </>
+);
+
+export const Theming = () => {
+  const theme = {
+    cloudsColor: 'MidnightBlue',
+    dropsColor: 'white',
+    boltColor: 'lightBlue',
+    sunColor: 'Orange',
+    raysColor: 'OrangeRed',
+  };
+
+  return (
+    <WeatherThemeProvider theme={theme}>
+      <Variations />
+    </WeatherThemeProvider>
+  );
+};

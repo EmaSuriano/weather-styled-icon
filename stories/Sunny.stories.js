@@ -1,29 +1,36 @@
 import React from 'react';
-import { Sunny } from '../src';
-import { storiesOf } from '@storybook/react';
-import { CenterContainer, ThemeContainer } from './utils';
+import { Sunny, WeatherThemeProvider } from '../src';
+import Center from './helpers/Center';
 
-const theme = {
-  sunColor: 'SkyBlue',
-  raysColor: 'SlateBlue',
-  backgroundColor: 'peachPuff',
+export default {
+  title: 'Sunny',
+  component: Sunny,
+  decorators: [storyFn => <Center>{storyFn()}</Center>],
 };
 
-storiesOf('Sunny', module)
-  .add('Variations', () => (
-    <CenterContainer>
-      <Sunny />
-    </CenterContainer>
-  ))
-  .add('Different Sizes', () => (
-    <CenterContainer>
-      <Sunny size={0.7} />
-      <Sunny />
-      <Sunny size={1.3} />
-    </CenterContainer>
-  ))
-  .add('Theming', () => (
-    <ThemeContainer theme={theme}>
-      <Sunny />
-    </ThemeContainer>
-  ));
+export const Variations = () => (
+  <>
+    <Sunny />
+  </>
+);
+
+export const DifferentSizes = () => (
+  <>
+    <Sunny size={0.7} />
+    <Sunny />
+    <Sunny size={1.3} />
+  </>
+);
+
+export const Theming = () => {
+  const theme = {
+    sunColor: 'SkyBlue',
+    raysColor: 'SlateBlue',
+  };
+
+  return (
+    <WeatherThemeProvider theme={theme}>
+      <Variations />
+    </WeatherThemeProvider>
+  );
+};

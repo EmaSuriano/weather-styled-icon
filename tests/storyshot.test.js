@@ -2,7 +2,7 @@ import initStoryshots from '@storybook/addon-storyshots';
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
 import 'babel-polyfill';
 
-const beforeScreenshot = async page => {
+const stopAnimations = async (page) => {
   await page.evaluate(() =>
     document.querySelectorAll('[data-animation]').forEach(({ style }) => {
       style.animation = 'stop'; // eslint-disable-line no-param-reassign
@@ -16,10 +16,10 @@ const getMatchOptions = () => ({
 });
 
 initStoryshots({
-  suite: 'Image storyshots',
+  suite: 'Visual Testing',
   test: imageSnapshot({
     storybookUrl: 'http://localhost:6006/',
-    beforeScreenshot,
+    beforeScreenshot: stopAnimations,
     getMatchOptions,
   }),
 });
