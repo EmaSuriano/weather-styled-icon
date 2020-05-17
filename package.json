@@ -18,8 +18,8 @@
     "test:ci": "start-server-and-test 6006",
     "lint": "eslint src/**",
     "start": "start-storybook -p 6006",
-    "docs": "yarn start --docs",
-    "storybook-build": "build-storybook"
+    "docs": "start-storybook --docs",
+    "docs:build": "build-storybook --docs"
   },
   "peerDependencies": {
     "react": "16.x",
