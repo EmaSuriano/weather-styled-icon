@@ -10,10 +10,16 @@ const stopAnimations = async (page) => {
   );
 };
 
+const getMatchOptions = () => ({
+  failureThreshold: 0.2,
+  failureThresholdType: 'percent',
+});
+
 initStoryshots({
   suite: 'Visual Testing',
   test: imageSnapshot({
     storybookUrl: 'http://localhost:6006/',
     beforeScreenshot: stopAnimations,
+    getMatchOptions,
   }),
 });
