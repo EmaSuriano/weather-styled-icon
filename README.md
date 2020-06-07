@@ -76,7 +76,7 @@ MIT.
 
 [npm-image]: https://badge.fury.io/js/weather-styled-icon.svg
 [npm-url]: https://www.npmjs.com/package/weather-styled-icon
-[travis-image]: https://travis-ci.org/EmaSuriano/weather-styled-icon.svg?branch=master
-[travis-url]: https://travis-ci.org/EmaSuriano/weather-styled-icon
+[travis-image]: https://travis-ci.com/EmaSuriano/weather-styled-icon.svg?branch=master
+[travis-url]: https://travis-ci.com/EmaSuriano/weather-styled-icon
 [storybook-image]: https://img.shields.io/badge/%F0%9F%93%93-Storybook-ff69b4.svg
 [demo-link]: https://weather-styled-icons.netlify.app/
