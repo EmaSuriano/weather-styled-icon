@@ -35,7 +35,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-polyfill": "^6.26.0",
-    "eslint": "^6.0.0",
+    "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.0.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.8.0",
