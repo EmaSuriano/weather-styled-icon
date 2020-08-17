@@ -29,7 +29,7 @@
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-storyshots": "^5.3.18",
     "@storybook/addon-storyshots-puppeteer": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "^6.0.10",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-require-context-hook": "^1.0.0",
