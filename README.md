@@ -77,4 +77,4 @@ MIT.
 [npm-image]: https://badge.fury.io/js/weather-styled-icon.svg
 [npm-url]: https://www.npmjs.com/package/weather-styled-icon
 [storybook-image]: https://img.shields.io/badge/%F0%9F%93%93-Storybook-ff69b4.svg
-[demo-link]: https://weather-styled-icons.netlify.app/
+[demo-link]: https://github.com/EmaSuriano/weather-styled-icon.git
