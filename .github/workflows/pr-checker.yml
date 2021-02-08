@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v1
       - run: yarn install --frozen-lockfile
       - run: yarn build
-  lint:
+  lint-build:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,12 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn build
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Manual deploy
+        uses: actions/setup-node@v1
+      - run: yarn install --frozen-lockfile
       - run: yarn test:ci

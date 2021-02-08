@@ -1,4 +1,4 @@
-name: Update Summary
+name: Deploy package
 
 on:
   push:
