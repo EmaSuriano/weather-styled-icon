@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  semantic-release:
+  deploy-package:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,4 +14,7 @@ jobs:
       - name: Manual deploy
         uses: actions/setup-node@v1
       - run: yarn install --frozen-lockfile
-      - run: npx semantic-release
+      - name: Semantic Release
+        run: npx semantic-release
+        with:
+          token: ${{secrets.GH_TOKEN}}
