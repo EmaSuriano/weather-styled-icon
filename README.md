@@ -3,7 +3,6 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![dependabot](https://badgen.net/dependabot/EmaSuriano/weather-styled-icon/?icon=dependabot)](https://dependabot.com/)
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 [![Storybook][storybook-image]][demo-link]
 [![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
 
@@ -76,7 +75,5 @@ MIT.
 
 [npm-image]: https://badge.fury.io/js/weather-styled-icon.svg
 [npm-url]: https://www.npmjs.com/package/weather-styled-icon
-[travis-image]: https://travis-ci.com/EmaSuriano/weather-styled-icon.svg?branch=master
-[travis-url]: https://travis-ci.com/EmaSuriano/weather-styled-icon
 [storybook-image]: https://img.shields.io/badge/%F0%9F%93%93-Storybook-ff69b4.svg
 [demo-link]: https://weather-styled-icons.netlify.app/
