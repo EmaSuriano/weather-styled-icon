@@ -1,0 +1,23 @@
+name: Gh deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Manual deploy
+        uses: actions/setup-node@v1
+      - run: yarn install --frozen-lockfile
+      - run: yarn docs:build
+      - name: Gh Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: storybook-static
