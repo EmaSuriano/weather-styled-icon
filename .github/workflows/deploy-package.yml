@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  update-summary:
+  semantic-release:
     runs-on: ubuntu-latest
 
     steps:
