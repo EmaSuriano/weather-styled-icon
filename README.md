@@ -1,5 +1,6 @@
 # weather-styled-icon
 
+![Build status](https://github.com/EmaSuriano/weather-styled-icon/workflows/Build%20Status/badge.svg)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![dependabot](https://badgen.net/dependabot/EmaSuriano/weather-styled-icon/?icon=dependabot)](https://dependabot.com/)
 [![NPM Version][npm-image]][npm-url]
