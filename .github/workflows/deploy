@@ -1,0 +1,16 @@
+name: Update Summary
+
+on:
+  push:
+    branches: master
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Manual deploy
+        uses: actions/setup-node@v1
+      - run: yarn install --frozen-lockfile
+      - run: npx semantic-release
